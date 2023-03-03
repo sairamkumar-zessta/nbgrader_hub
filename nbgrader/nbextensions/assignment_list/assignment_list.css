@@ -1,0 +1,266 @@
+#assignments .panel-group .panel {
+    margin-top: 3px;
+    margin-bottom: 1em;
+}
+
+#assignments .panel-group .panel .panel-heading {
+    background-color: #eee;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    line-height: 22px;
+}
+
+#assignments .panel-group .panel .panel-heading a:focus, a:hover {
+    text-decoration: none;
+}
+
+#assignments .panel-group .panel .panel-body {
+    padding: 0;
+}
+
+#assignments .panel-group .panel .panel-body .list_container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0px;
+    border-radius: 0px;
+}
+
+#assignments .panel-group .panel .panel-body .list_container .list_item {
+    border-bottom: 1px solid #ddd;
+}
+
+#assignments .panel-group .panel .panel-body .list_container .list_item:last-child {
+    border-bottom: 0px;
+}
+
+#assignments .assignment-notebooks .list_item {
+    background-color: inherit !important;
+}
+
+#assignments .assignment-notebooks .list_item:hover {
+    background-color: #ddd !important;
+}
+
+#assignments .assignment-notebooks .list_item:first-child:hover {
+    background-color: inherit !important;
+}
+
+#assignments .list_item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    line-height: 22px;
+}
+
+#assignments .list_item > div {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#assignments .item_status {
+    text-align: right;
+}
+
+#assignments .item_status .btn {
+    min-width: 13ex;
+}
+
+#assignments .list_placeholder {
+    display: none;
+}
+
+#assignments .list_error, #assignments .version_error {
+    display: none;
+}
+
+#submission-message p,
+#validation-message p {
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+#submission-message pre,
+#validation-message pre {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#submission-message pre {
+    white-space: pre;
+}
+
+#assignments .list_placeholder, #assignments .list_loading, #assignments .list_error {
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+###custom.css
+
+#course_list_default{
+    border-color:#5FBEF0;
+    border-radius:15px;
+    padding-right:40px;
+    padding-left:10px;
+    font-family:'Poppins';
+    font-size:15px;
+    font-weight:600;
+}
+#course_list_default:hover{
+    background-color:white;
+}
+#course_list_dropdown{
+    border:none;
+    margin-left: 2px;
+    margin-top:2px;
+    background-color:#FFFFFF;
+}
+#course_list_dropdown:hover{
+   background-color:#FFFFFF;
+}
+.toolbar_info{
+   font-size:12px;
+}
+.col-sm-8.mo-padding{
+    padding-top:15px;
+    padding-bottom:25px;
+    font-family:'Gothic A1';
+    font-size:15px;
+}
+#assignments_buttons{
+    margin-top:15px;
+    border-color: #5FBEF0;
+    background-color:#FFFFFF;
+}
+.panel.panel-default{
+    border-radius:10px;
+    border-color:#5FBEF0;
+    margin-bottom:30px !important;
+    border-width:2px;
+}
+.panel-heading{
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-weight:600;
+    padding-left:20px !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    font-family:'Poppins';
+    font-size:16px;
+    background-color: #D2EDFB !important;
+}
+#assignments .list_loading, #assignments .list_error{
+    font-weight:400 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    padding-left:20px !important;
+    font:'Gothic A1' !important;
+    font-size:15px;
+}
+
+.col-md-12:hover {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* background-color: #FFFFFF; */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.list_item.row:nth-last-of-type(1){
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.row.list_placeholder{
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    font-weight:400 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    padding-left:20px !important;
+    font-family:'Gothic A1' !important;
+    font-size:15px;
+    border: none;
+}
+.col-md-12:hover{
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    background-color:#FFFFFF;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+}
+#course_list{
+    border-radius:10px;
+}
+#course_list>li>a{
+    color:#5FBEF0;
+}
+#course_list>li>a:hover{
+    border-radius:10px;
+}
+#refresh_assignments_list{
+	border:10px;
+	background-color:#FFFFFF !important;
+	margin-top:10px !important;
+}
+.no-padding {
+    padding: 10px;
+}
+.list_toolbar .tree-buttons {
+    padding-top: 0px;
+}
+.item_name {
+    padding-left: 13px;
+}
+.list_item {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important; 
+    padding-left: 0px !important; 
+    padding-right: 0px !important;
+}
+#assignments .btn-xs{
+     margin-right: 5%;
+    border-radius: 10px;
+    background-color: #5FBEF0;
+    border: 0px;
+    height: 30px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom:2%;
+    font-size:14px;
+    color:#FFFFFF;
+}
+ #assignments .fa.fa-refresh{
+    color:#5FBEF0;
+}
+#released_assignments_list_placeholder>div{
+    font-size: 0.8vw;
+}
+.panel-body{
+    padding:10px !important;
+    background-color:#FFFFFF;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    font-size:15px;
+}
+.row.list_toolbar{
+    height:52px;
+}
+.col-sm-4.no-padding.tree-buttons{
+    margin-top:-15px;
+}
+#assignments .list_container > div {
+    border-bottom:0px !important;
+    padding:0px !important;
+    margin-bottom:2px;
+}
