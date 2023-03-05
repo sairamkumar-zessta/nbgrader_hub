@@ -1048,7 +1048,7 @@ Manage Students</a></li>
 				$('.options-list').toggleClass('stop-visible');
 	});
 
-	$("#selectInput div li").click(function () {
+	$("#selectInput").on("click", "div li", function () {
 		console.log('entered');
 		var selectedText = $(this).attr('id');
 		$("#selectedListSelect").text(selectedText);
