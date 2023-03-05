@@ -79,16 +79,6 @@
 		justify-content: space-between;
 	}
 
-	.modal-content {
-		border-radius: 2rem;
-	}
-
-	.align-middle {
-		text-align: left !important;
-		font-size: 15px;
-		font-weight: 600;
-	}
-
 	table.form-table>tbody>tr>td {
 		text-align: left !important;
 		border-top: none;
@@ -100,171 +90,11 @@
 		border-radius: 1px;
 	}
 
-	.modal-footer {
-		border-top: none;
-		text-align: center;
-	}
-
-	.btn-primary {
-		color: #fff;
-		background-color: #5FBEF0;
-		border-radius: 20px;
-		width: 100px;
-		border: none;
-		font-weight: 600;
-	}
-
-	.btn-danger {
-		color: #5FBEF0;
-		background-color: #ffffff;
-		border-color: #5FBEF0;
-		border-radius: 20px;
-		width: 100px;
-	}
-
-	.modal-title {
-		font-size: 20px;
-		font-weight: bolder;
-	}
-
 	.page-header>h1 {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-	}
-
-	#switch_course_button {
-		width: calc(10vw - 2rem);
-		height: 4rem;
-		border-radius: 3rem;
-		border: none;
-		margin-right: calc(-19vw + 0rem);
-		background-color: #D2EDFB;
-		font-size: 2rem;
-		font-weight: 100;
-	}
-
-	#change_course_button {
-		width: calc(8vw - 2rem);
-		height: calc(6vh - 2rem);
-		border-radius: 2rem;
-		border: none;
-		margin: 3rem;
-		background-color: #D2EDFB;
-		font-size: 2rem;
-		font-weight: 100;
-	}
-
-
-	.changeCourseModal {
-		display: none;
-		position: fixed;
-		z-index: 2;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		background-color: rgba(0, 0, 0, 0.4);
-	}
-
-	.courseModalContent {
-		background-color: #fefefe;
-		margin: calc(35vh - 2rem) auto;
-		padding: 3rem;
-		border: 1px solid #5FBEF0;
-		width: 40%;
-		border-radius: 3rem;
-		height: 40%;
-		box-shadow: 0px 2px 13px rgb(170 170 170 / 27%);
-	}
-
-	.courseClose {
-		color: #000000;
-		float: right;
-		font-size: 2rem;
-		font-weight: bold;
-	}
-
-	.courseClose:hover,
-	.courseClose:focus {
-		color: #FF0000;
-		text-decoration: none;
-		cursor: pointer;
-	}
-
-	.column-flex {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: baseline;
-	}
-
-	.row-flex {
-		display: flex;
-		align-self: center;
-	}
-
-	.button-row {
-		margin-left: calc(2vw - 21rem);
-	}
-
-	#courseLabel {
-		font-family: 'Gothic A1';
-		font-style: normal;
-		font-size: 2rem;
-		line-height: 3vh;
-		color: black;
-		font-weight: 400 !important;
-		margin: 3rem;
-	}
-
-	#cancel_course_button {
-		background: white;
-		border-radius: 2rem;
-		border-color: #5FBEF0;
-		margin: 3rem;
-		font-family: 'Poppins';
-		font-style: normal;
-		font-size: 2rem;
-		line-height: 2vh;
-		color: #5FBEF0;
-		width: calc();
-		position: absolute;
-		border-width: 0.1vw !important;
-		border-style: double;
-		width: calc(8vw - 2rem);
-		height: calc(6vh - 2rem);
-	}
-
-	.select-div::after {
-		content: url("https://ik.imagekit.io/iwwbj9so6/Vector_9_c4obhy8x5.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660643960909");
-	}
-
-	.select-div {
-		position: relative;
-	}
-
-	.select-div::after {
-		position: absolute;
-		top: calc(4vh - 2rem);
-		right: calc(4vw - 2rem);
-	}
-
-	#course-list {
-		appearance: none;
-		margin: 3rem 3rem 3rem 3rem;
-		width: calc(9vw - 2rem);
-		height: 3.5vh;
-		background: #FFFFFF;
-		border: 0.1vw solid #5FBEF0;
-		border-radius: 2rem;
-		font-family: 'Poppins';
-		font-style: normal;
-		font-size: 1.8rem;
-		padding: 0.5rem 0.5rem 0.5rem 1rem;
-		font-weight: 100;
 	}
 
 	#note_content {
@@ -274,26 +104,24 @@
 		text-align: center;
 	}
 
+	.arrange-instructions{
+		margin-left: 24vw;
+    padding-bottom: 2.2rem;
+	}
+
 	#instructions-panel-default {
-		width: 70%;
+		width: 57%;
 		border-radius: 2rem;
 		float: right;
 		border-color: #5FBEF0;
 		background-color: #FFFFFF;
 		font-family: Poppins;
+		position: fixed;
+		z-index: 1;
 	}
 
 	@media (max-width: 2560px) {
-		#switch_course_button {
-			width: calc(10vw - 2rem);
-			margin-right: calc(-16vw + 0rem);
-		}
-
-		#change_course_button,
-		#cancel_course_button {
-			height: calc(8vh - 2rem);
-		}
-
+	
 		.footer {
 			margin-left: calc(13vw - 2rem);
 			height: 5.6rem;
@@ -320,35 +148,6 @@
 			padding-left: calc(1vw - 2rem);
 		}
 
-		#courseLabel {
-			font-size: 2.5rem;
-		}
-
-		#course-list {
-			font-size: 2.2rem;
-		}
-
-		.courseClose {
-			font-size: 4rem;
-		}
-
-		.select-div::after {
-			top: calc(3.5vh - 2rem);
-			right: calc(3vw - 2rem);
-		}
-
-		.courseModalContent {
-			width: 25%;
-			height: 25%;
-		}
-
-		#change_course_button {
-			border-radius: 3rem;
-		}
-
-		#cancel_course_button {
-			border-radius: 3rem;
-		}
 	}
 
 	@media (max-width: 2560px) {
@@ -357,11 +156,6 @@
 		}
 	}
 
-	@media (max-width: 2374px) {
-		.select-div::after {
-			top: calc(3.8vh - 2rem);
-		}
-	}
 
 	@media (max-width: 2330px) {
 		.footer {
@@ -376,9 +170,7 @@
 	}
 
 	@media (max-width: 2300px) {
-		#switch_course_button {
-			margin-right: calc(-18vw + 0rem);
-		}
+	
 
 		.page-header {
 			padding-left: calc(1.4vw - 2rem);
@@ -391,11 +183,6 @@
 		}
 	}
 
-	@media (max-width: 2374px) {
-		.select-div::after {
-			top: calc(4vh - 2rem);
-		}
-	}
 
 	@media (max-width: 2100px) {
 		.page-header {
@@ -410,25 +197,12 @@
 
 		}
 
-		.select-div::after {
-			top: calc(4.2vh - 2rem);
-		}
 	}
 
-	@media (max-width: 1978px) {
-		.courseModalContent {
-			width: 30%;
-			height: 30%;
-		}
-	}
 
 	@media (max-width: 1949px) {
 		.page-header {
 			padding-left: calc(3.4vw - 2rem);
-		}
-
-		#switch_course_button {
-			height: 5rem;
 		}
 
 		.footer {
@@ -440,28 +214,12 @@
 			font-size: 1.5rem;
 		}
 
-		#switch_course_button {
-			margin-right: calc(-19vw + 0rem);
-		}
 	}
 
 	@media (max-width: 1900px) {
 		.footer .add-assignment {
 			font-size: 1.5rem;
 		}
-	}
-
-	@media (max-width: 1863px) {
-		#course-list {
-			height: 4vh;
-			width: calc(10vw - 2rem);
-		}
-
-		.select-div::after {
-			top: calc(4.5vh - 2rem);
-			right: calc(3.5vw - 2rem);
-		}
-
 	}
 
 	@media (max-width: 1810px) {
@@ -480,23 +238,8 @@
 			height: 3.3rem;
 		}
 
-		#switch_course_button {
-			font-size: 1.5rem;
-		}
-
 		.footer .add-assignment {
 			font-size: 1.3rem;
-		}
-	}
-
-	@media (max-width: 1682px) {
-		#course-list {
-			height: 4vh;
-			width: calc(11vw - 2rem);
-		}
-
-		#courseLabel {
-			font-size: 2.2rem;
 		}
 	}
 
@@ -515,49 +258,9 @@
 		}
 	}
 
-	@media (max-width: 1583px) {
-		#courseLabel {
-			font-size: 2rem;
-		}
-	}
-
-	@media (max-width: 1528px) {
-		.courseModalContent {
-			width: 40%;
-			height: 40%;
-		}
-
-		#course-list {
-			width: calc(12vw - 2rem);
-			height: 5vh;
-		}
-
-		.select-div::after {
-			right: calc(5vw - 2rem);
-			top: calc(6vh - 2rem);
-		}
-	}
-
 	@media (max-width: 1500px) {
 		.footer .add-assignment {
 			font-size: 1.1rem;
-		}
-	}
-
-	@media (max-width: 1442px) {
-		#course-list {
-			font-size: 1.4rem;
-		}
-
-		#cancel_course_button,
-		#change_course_button {
-			width: calc(10vw - 2rem);
-		}
-	}
-
-	@media (max-width: 1432px) {
-		#switch_course_button {
-			font-size: 1.3rem;
 		}
 	}
 
@@ -582,35 +285,6 @@
 		}
 	}
 
-	@media (max-width: 1262px) {
-		#courseLabel {
-			font-size: 1.8rem;
-		}
-
-		#cancel_course_button,
-		#change_course_button {
-			font-size: 1.8rem;
-			height: calc(8vh - 2rem);
-		}
-
-		.courseClose {
-			font-size: 2rem;
-		}
-
-		.courseModalContent {
-			height: 27%;
-		}
-
-		#switch_course_button {
-			width: calc(12vw - 2rem);
-		}
-	}
-
-	@media (max-width: 1255px) {
-		#course-list {
-			width: calc(11vw - 2rem);
-		}
-	}
 
 	@media (max-width: 1248px) {
 		.table.table-hover {
@@ -621,17 +295,6 @@
 			width: calc(14.5vw - 2rem);
 		}
 
-		#switch_course_button {
-			width: calc(12vw - 2rem);
-			height: 4rem;
-		}
-	}
-
-	@media (max-width: 1218px) {
-		.courseModalContent {
-			height: 40%;
-			width: 40%;
-		}
 	}
 
 	@media (max-width: 1186px) {
@@ -656,8 +319,9 @@
 		border-radius: 21px;
 		background: #5FBEF0;
 		color: #fff;
-		padding: 0.5rem 1.6rem;
+		padding: 1rem 1.6rem;
 		margin-right: -16vw;
+		border: none;
 	}
 
 	.bg-model {
@@ -899,34 +563,36 @@ Manage Students</a></li>
 
 {%- block messages -%}
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	<div class="panel panel-default" id="instructions-panel-default">
-		<div class="panel-heading" role="tab" id="headingOne">
-			<h4 class="panel-title">
-				<span class='instruction-head'>Instructions (click to expand)</span>
-				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-					aria-expanded="false" aria-controls="collapseOne">
-					<img src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
-				</a>
-			</h4>
-		</div>
-		<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-			<div class="panel-body">
-				<ol>
-					<li>To <b>create</b> an assignment, click the "Add new assignment..." button below.</li>
-					<li>To <b>edit assignment files</b>, click on the name of an assignment.</li>
-					<li>To <b>edit the assignment metadata</b>, click on the edit button.</li>
-					<li>To <b>generate</b> the student version of an assignment, click on the generate button.</li>
-					<li>To <b>preview</b> the student version of an assignment, click on the preview button.</li>
-					<li><i>(JupyterHub only)</i> To <b>release</b> the assignment to students, click the release button.
-						You can "unrelease" an assignment by clicking again, though note some students may have
-						already accessed the assignment. <b>Note</b> that for the release button to become
-						available, the <code>course_id</code> option must be set in <code>nbgrader_config.py</code>.
-						For details, see <a href="http://nbgrader.readthedocs.io/en/stable/configuration/config_options.html">the
-							documentation</a>.</li>
-					<li><i>(JupyterHub only)</i> To <b>collect</b> assignments, click the collect button.</li>
-					<li>To <b>autograde</b> submissions, click on the number of collected submissions. You must run
-						the autograder on the submissions before you can manually grade them.</li>
-				</ol>
+	<div class="arrange-instructions">
+		<div class="panel panel-default" id="instructions-panel-default">
+			<div class="panel-heading" role="tab" id="headingOne">
+				<h4 class="panel-title">
+					<span class='instruction-head'>Instructions (click to expand)</span>
+					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+						aria-expanded="false" aria-controls="collapseOne">
+						<img src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
+					</a>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				<div class="panel-body">
+					<ol>
+						<li>To <b>create</b> an assignment, click the "Add new assignment..." button below.</li>
+						<li>To <b>edit assignment files</b>, click on the name of an assignment.</li>
+						<li>To <b>edit the assignment metadata</b>, click on the edit button.</li>
+						<li>To <b>generate</b> the student version of an assignment, click on the generate button.</li>
+						<li>To <b>preview</b> the student version of an assignment, click on the preview button.</li>
+						<li><i>(JupyterHub only)</i> To <b>release</b> the assignment to students, click the release button.
+							You can "unrelease" an assignment by clicking again, though note some students may have
+							already accessed the assignment. <b>Note</b> that for the release button to become
+							available, the <code>course_id</code> option must be set in <code>nbgrader_config.py</code>.
+							For details, see <a href="http://nbgrader.readthedocs.io/en/stable/configuration/config_options.html">the
+								documentation</a>.</li>
+						<li><i>(JupyterHub only)</i> To <b>collect</b> assignments, click the collect button.</li>
+						<li>To <b>autograde</b> submissions, click on the number of collected submissions. You must run
+							the autograder on the submissions before you can manually grade them.</li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1010,7 +676,7 @@ Manage Students</a></li>
 	$('#switch_course_btn').click(()=> {
 		$('#switchCourseModal').show();
 		$("#selectedListSelect").text('Course name');
-		$('.options-list').addClass('stop-visible');
+		$('.options-list').removeClass('stop-visible');
 	});
 
 	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
