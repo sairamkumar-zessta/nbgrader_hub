@@ -117,7 +117,6 @@
 		background-color: #FFFFFF;
 		font-family: Poppins;
 		position: fixed;
-		z-index: 1;
 	}
 
 	@media (max-width: 2560px) {
