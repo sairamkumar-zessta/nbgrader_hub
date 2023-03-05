@@ -849,21 +849,17 @@ Manage Assignments
 				<div class="select-input" id="selectInput">
 					<p id="selected" class="placeholder-div select-arrange">CourseName</p>
 					<br>
-					<div class="options-list">
+					<div class="options-list" id="coursesListOptions">
 						<li id="first">first</li>
 						<li id="sec">sec</li>
-						<li>third</li>
-						<li>fourth</li>
-						<li>five</li>
-						<li id="sixaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">sixaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
 					</div>
 				</div>
 			</div>
 		</div>
 		<p class="instruction">Note: Restart your server for changes to apply</p>
 		<div class="course-model-bottom">
-			<button  class="cancel-button">Cancel</button>
-			<button  class="change-button">Change</button>
+			<button id="switchCourseCancel" class="cancel-button">Cancel</button>
+			<button id="switchCourseChange" class="change-button">Change</button>
 		</div>
 	</div>
 </div>
@@ -1020,7 +1016,6 @@ Manage Students</a></li>
 <script>
 	const hub_url = window.location.href.split('user')[0];
 	const ngshare_url = hub_url + 'services/ngshare/';
-	const switchCourseButton = document.getElementById("switch_course_button");
 	const courseModal = document.getElementById("changeCourseModal");
 	const closeSpan = document.getElementsByClassName("courseClose")[0];
 	const cancel = document.getElementById("cancel_course_button");
@@ -1034,23 +1029,35 @@ Manage Students</a></li>
 			var courses_list = response_json.courses;
 			console.log(courses_list);
 			$.each(courses_list, function (item, value) {
-				$('#course-list').append($('<option>', {
-					value: value,
+				$('#coursesListOptions').append($('<li>', {
+					id: value,
 					text: value
 				}));
 			})
 		}
 		loadCourses();
 	}
-	switchCourseButton.onclick = function () {
-		courseModal.style.display = "block";
-	}
-	cancel.onclick = function () {
-		courseModal.style.display = "none";
-	}
-	closeSpan.onclick = function () {
-		courseModal.style.display = "none";
-	}
+
+	$('#switch_course_btn').click(()=> $('#switchCourseModal').show());
+
+	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
+
+	$('#switchCourseChange').click(()=>{
+
+	});
+
+	$('#selectouter').click(() => {
+				$('.options-list').toggleClass('stop-visible');
+	});
+
+	$("#selectInput div li").click(function () {
+		var selectedText = $(this).attr('id');
+		$("#selected").text(selectedText);
+		$("#selected").removeClass('placeholder-div');
+		console.log($("#selected").text());
+	});
+
+
 	change_course_button.onclick = function () {
 		const selectedCourse = selected_course.options[selected_course.selectedIndex].text;
 		if (selectedCourse == 'select course') {
