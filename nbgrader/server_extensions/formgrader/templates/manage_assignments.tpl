@@ -656,6 +656,8 @@
 		border-radius: 21px;
 		background: #5FBEF0;
 		color: #fff;
+		padding: 0.5rem 1.6rem;
+		margin-right: -16vw;
 	}
 
 	.bg-model {
@@ -718,12 +720,12 @@
 
 		.course-model-bottom {
 			text-align: center;
-			margin-bottom: 3rem;
+			margin-top: -2rem;
 		}
 
 		.course-model-bottom button {
 			border-radius: 2.1rem;
-			padding: 0.5rem 1.6rem;
+			padding: 1rem 4rem;
 			width: 15rem;
 
 		}
@@ -811,7 +813,7 @@
 			background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
 			background-repeat: no-repeat;
 			background-position: 98%;
-			margin-bottom: -2.1rem;
+			margin-bottom: -4.1rem;
 			font-family: 'Poppins';
 			font-style: normal;
 			font-weight: 400;
@@ -864,35 +866,6 @@ Manage Assignments
 	</div>
 </div>
 
-
-<!-- <div id="changeCourseModal" class="modal">
-	<div class="courseModalContent">
-		<span class="courseClose">&times;</span>
-		<div class="column-flex">
-			<div class="row-flex select-div">
-				<div>
-					<label id="courseLabel" for="course">Course name</label>
-				</div>
-				<div>
-					<select class="select" id="course-list" name="course">
-						<option value="" disabled selected>select course</option>
-					</select>
-				</div>
-			</div>
-			<div class="row-flex">
-				<p id='note_content'>Note: Restart your server for the changes to apply.</p>
-			</div>
-			<div class="row-flex button-row">
-				<div>
-					<button type="button" id="change_course_button">Change</button>
-				</div>
-				<div>
-					<button type="button" id="cancel_course_button">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 {%- endblock -%}
 
 {%- block sidebar -%}
@@ -1037,6 +1010,7 @@ Manage Students</a></li>
 	$('#switch_course_btn').click(()=> {
 		$('#switchCourseModal').show();
 		$("#selectedListSelect").text('Course name');
+		$('.options-list').addClass('stop-visible');
 	});
 
 	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
@@ -1044,7 +1018,7 @@ Manage Students</a></li>
 	$('#switchCourseChange').on('click',()=>{
 		const selectedCourse = $('#selectedListSelect').text();
 		if (selectedCourse == 'Course name') {
-			selected_course.style.border = '0.1vw solid red';
+			$('#selectInput').css({'border': '0.1vw solid red'});
 		}
 		else {
 			$.ajax({
@@ -1071,6 +1045,7 @@ Manage Students</a></li>
 		$("#selectedListSelect").text(selectedText);
 		$("#selectedListSelect").removeClass('placeholder-div');
 		console.log('selectText',selectedText);
+		$('#selectInput').removeAttr('style');
 	});
 
 </script>
