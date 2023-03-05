@@ -847,7 +847,7 @@ Manage Assignments
 			<span class="course-title">Course name</span>
 			<div id='selectouter'>
 				<div class="select-input" id="selectInput">
-					<p id="selected" class="placeholder-div select-arrange">CourseName</p>
+					<p id="selectedListSelect" class="placeholder-div select-arrange">CourseName</p>
 					<br>
 					<div class="options-list" id="coursesListOptions">
 					</div>
@@ -1051,8 +1051,8 @@ Manage Students</a></li>
 	$("#selectInput div li").click(function () {
 		console.log('entered');
 		var selectedText = $(this).attr('id');
-		$("#selected").text(selectedText);
-		$("#selected").removeClass('placeholder-div');
+		$("#selectedListSelect").text(selectedText);
+		$("#selectedListSelect").removeClass('placeholder-div');
 		console.log('selectText',selectedText);
 	});
 
