@@ -850,8 +850,6 @@ Manage Assignments
 					<p id="selected" class="placeholder-div select-arrange">CourseName</p>
 					<br>
 					<div class="options-list" id="coursesListOptions">
-						<li id="first">first</li>
-						<li id="sec">sec</li>
 					</div>
 				</div>
 			</div>
