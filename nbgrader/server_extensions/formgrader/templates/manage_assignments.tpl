@@ -1058,10 +1058,5 @@ Manage Students</a></li>
 		console.log('selectText',selectedText);
 	});
 
-	window.onclick = function (event) {
-		if (event.target == courseModal) {
-			courseModal.style.display = "none";
-		}
-	}
 </script>
 {% endblock %}
