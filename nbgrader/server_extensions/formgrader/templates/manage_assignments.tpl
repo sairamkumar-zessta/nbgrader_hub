@@ -1051,31 +1051,13 @@ Manage Students</a></li>
 	});
 
 	$("#selectInput div li").click(function () {
+		console.log('entered');
 		var selectedText = $(this).attr('id');
 		$("#selected").text(selectedText);
 		$("#selected").removeClass('placeholder-div');
-		console.log($("#selected").text());
+		console.log('selectText',selectedText);
 	});
 
-
-	change_course_button.onclick = function () {
-		const selectedCourse = selected_course.options[selected_course.selectedIndex].text;
-		if (selectedCourse == 'select course') {
-			selected_course.style.border = '0.1vw solid red';
-		}
-		else {
-			$.ajax({
-				url: "formgrader/api/changecourse/" + selectedCourse,
-			}).done(function (response) {
-				console.log(response);
-				console.log(typeof (response.success))
-				if (response.success == true || "True" || "true") {
-					window.location.href = `${hub_url}hub/home`;
-				}
-			}
-			);
-		}
-	}
 	window.onclick = function (event) {
 		if (event.target == courseModal) {
 			courseModal.style.display = "none";
