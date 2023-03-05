@@ -716,7 +716,7 @@ Manage Students</a></li>
 	});
 
 	$('#instructionsExpand').on("click",()=>{
-		$('#instructions-panel-default').css({'z-idex': '1'});
+		$('#instructions-panel-default').css({'z-index': '1'});
 	});
 </script>
 {% endblock %}
