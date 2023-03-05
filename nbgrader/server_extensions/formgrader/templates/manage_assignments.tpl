@@ -5,6 +5,8 @@
 </script>
 <script src="{{ base_url }}/formgrader/static/js/manage_assignments.js"></script>
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+	
 	.instruction-head {
 		font-weight: 600;
 		font-family: 'Poppins';
@@ -657,7 +659,7 @@
 	}
 
 	.bg-model {
-			/* display: none; */
+			display: none;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -1014,11 +1016,7 @@ Manage Students</a></li>
 <script>
 	const hub_url = window.location.href.split('user')[0];
 	const ngshare_url = hub_url + 'services/ngshare/';
-	const courseModal = document.getElementById("changeCourseModal");
-	const closeSpan = document.getElementsByClassName("courseClose")[0];
-	const cancel = document.getElementById("cancel_course_button");
-	const change_course_button = document.getElementById("change_course_button");
-	const selected_course = document.getElementById("course-list");
+
 	window.onload = function () {
 		const loadCourses = async () => {
 			const response = await fetch(`${ngshare_url}/courses`);
@@ -1036,11 +1034,30 @@ Manage Students</a></li>
 		loadCourses();
 	}
 
-	$('#switch_course_btn').click(()=> $('#switchCourseModal').show());
+	$('#switch_course_btn').click(()=> {
+		$('#switchCourseModal').show();
+		$("#selectedListSelect").text('Course name');
+	});
 
 	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
 
-	$('#switchCourseChange').click(()=>{
+	$('#switchCourseChange').on('click',()=>{
+		const selectedCourse = $('#selectedListSelect').text();
+		if (selectedCourse == 'Course name') {
+			selected_course.style.border = '0.1vw solid red';
+		}
+		else {
+			$.ajax({
+				url: "formgrader/api/changecourse/" + selectedCourse,
+			}).done(function (response) {
+				console.log(response);
+				console.log(typeof (response.success))
+				if (response.success == true || "True" || "true") {
+					window.location.href = `${hub_url}hub/home`;
+				}
+			}
+			);
+		}
 
 	});
 
