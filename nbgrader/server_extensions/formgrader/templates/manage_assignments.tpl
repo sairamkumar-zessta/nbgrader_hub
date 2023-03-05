@@ -568,7 +568,7 @@ Manage Students</a></li>
 			<div class="panel-heading" role="tab" id="headingOne">
 				<h4 class="panel-title">
 					<span class='instruction-head'>Instructions (click to expand)</span>
-					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+					<a id="instructionsExpand"class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
 						aria-expanded="false" aria-controls="collapseOne">
 						<img src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
 					</a>
@@ -677,6 +677,7 @@ Manage Students</a></li>
 		$('#switchCourseModal').show();
 		$("#selectedListSelect").text('Course name');
 		$('.options-list').removeClass('stop-visible');
+		$('#instructions-panel-default').removeAttr('style');
 	});
 
 	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
@@ -714,5 +715,8 @@ Manage Students</a></li>
 		$('#selectInput').removeAttr('style');
 	});
 
+	$('#instructionsExpand').on("click",()=>{
+		$('#instructions-panel-default').css({'z-idex': '1'});
+	});
 </script>
 {% endblock %}
