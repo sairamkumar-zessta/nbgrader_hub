@@ -57,6 +57,8 @@
        .table.table-hover {
             box-sizing: border-box;
             border: 0.2rem solid #5FBEF0;
+            border-radius: 14px;
+            overflow:hidden;
         }
 
         .nav-stacked li a {
