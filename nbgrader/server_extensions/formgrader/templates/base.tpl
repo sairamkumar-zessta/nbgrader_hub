@@ -18,6 +18,7 @@
         var base_url = "{{ base_url }}";
     </script>
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
         body {
             font-family: 'Poppins', sans-serif !important;
         }
