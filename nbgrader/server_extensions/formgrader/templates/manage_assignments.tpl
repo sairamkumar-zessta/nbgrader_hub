@@ -515,7 +515,7 @@
 {%- endblock -%}
 {%- block title -%}
 Manage Assignments
-<button id="exportButton" onclick="exportData()">Export Grades</button>
+<button id="exportButton" onclick="exportData()" class="arrange-export-grades">Export Grades</button>
 <button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
 
 <div class="bg-model" id="switchCourseModal">
