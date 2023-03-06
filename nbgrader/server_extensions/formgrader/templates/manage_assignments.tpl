@@ -315,7 +315,7 @@
 		margin-right: -16vw;
 	}
 	.arrange-export-grades{
-		margin-right: -21vw;
+		margin-right: -33vw;
 	}
 	.bg-model {
 			display: none;
@@ -517,6 +517,7 @@
 Manage Assignments
 <button id="exportButton" onclick="exportData()" class="arrange-export-grades">Export Grades</button>
 <button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
+{%- endblock -%}
 
 <div class="bg-model" id="switchCourseModal">
 	<div class="course-model">
@@ -541,8 +542,6 @@ Manage Assignments
 		</div>
 	</div>
 </div>
-
-{%- endblock -%}
 
 {%- block sidebar -%}
 <li role="presentation" class="active">
