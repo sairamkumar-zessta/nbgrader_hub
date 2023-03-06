@@ -728,9 +728,9 @@ Manage Students</a></li>
 	});
 
 	function exportData() {
-		console.log(base_url);
+		console.log('baseUrl',base_url);
         $.ajax({
-            url: "formgrader/api/customexport",
+            url: "{{ base_url }}/formgrader/api/customexport",
         }).done(function (res) {
             console.log(res);
             const response = JSON.parse(res);
