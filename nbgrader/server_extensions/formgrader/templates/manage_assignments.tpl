@@ -728,6 +728,7 @@ Manage Students</a></li>
 	});
 
 	function exportData() {
+		console.log(base_url);
         $.ajax({
             url: "formgrader/api/customexport",
         }).done(function (res) {
