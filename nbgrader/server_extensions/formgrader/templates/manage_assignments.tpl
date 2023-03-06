@@ -314,6 +314,9 @@
 	.arrange-switch-course{
 		margin-right: -16vw;
 	}
+	.arrange-export-grades{
+		margin-right: -21vw;
+	}
 	.bg-model {
 			display: none;
 			position: fixed;
