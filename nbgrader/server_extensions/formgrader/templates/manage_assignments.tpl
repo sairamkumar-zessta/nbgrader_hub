@@ -33,29 +33,18 @@
 		border-radius: 2rem;
 	}
 
-	.footer {
-		margin-left: calc(16vw - 2rem);
-		margin-top: 2%;
-		border-radius: 3rem;
-		background-color: #5FBEF0;
-		height: 4.6rem;
-		width: 12vw;
-	}
-
-	.footer:hover {
-		background-color: #006BB6;
-	}
-
 	.glyphicon-plus {
 		color: #FFFFFF;
 		padding: 1.5rem;
 	}
 
-	.footer .add-assignment {
+	.add-assignment {
 		border-radius: 2rem;
 		color: #FFFFFF;
 		font-weight: 600;
 		font-size: 1.5rem;
+		margin-left: calc(16vw - 2rem);
+		margin-top: 2%;
 	}
 
 	.footer .add-assignment:hover {
@@ -509,6 +498,8 @@
 			font-weight: 600;
 			font-size: 14px;
 			color:#fff;
+			margin-left: calc(16vw - 2rem);
+			margin-top: 2%;
 		}
 </style>
 {%- endblock -%}
@@ -656,9 +647,7 @@ Manage Students</a></li>
 </tr>
 {%- endblock -%}
 {%block foot%}
-<div class='footer'>
 	<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span><img src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus"></span></button>Add new assignment</a>
-</div>
 {%endblock%}
 {% block script%}
 <script>
