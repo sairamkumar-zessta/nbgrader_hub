@@ -28,9 +28,7 @@
             font-style: normal;
             font-weight: 600;
             font-size: 21px;
-            line-height: 32px;
             color: #000000;
-
         }
 
         .jupyter-logo {
@@ -119,6 +117,7 @@
 
         .form-control.input-sm {
             border-color: #5FBEF0;
+            border-radius: 25px;
         }
 
         label {
