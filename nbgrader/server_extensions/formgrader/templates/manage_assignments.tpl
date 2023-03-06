@@ -43,7 +43,7 @@
 		color: #FFFFFF;
 		font-weight: 600;
 		font-size: 1.5rem;
-		margin-left: calc(16vw - 2rem);
+		margin-left: 2vw;
 		margin-top: 2%;
 	}
 
@@ -498,8 +498,11 @@
 			font-weight: 600;
 			font-size: 14px;
 			color:#fff;
-			margin-left: calc(16vw - 2rem);
-			margin-top: 2%;
+			padding: .7rem 1.6rem;
+		}
+		.plus-icon{
+			padding-bottom: 2px;
+			padding-right: 1px;
 		}
 </style>
 {%- endblock -%}
@@ -647,7 +650,7 @@ Manage Students</a></li>
 </tr>
 {%- endblock -%}
 {%block foot%}
-	<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span><img src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus"></span></button>Add new assignment</a>
+	<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span class="plus-icon"><img src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus">Add new assignment</span></button></a>
 {%endblock%}
 {% block script%}
 <script>
