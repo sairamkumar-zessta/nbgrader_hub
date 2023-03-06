@@ -567,9 +567,9 @@ Manage Students</a></li>
 			<div class="panel-heading" role="tab" id="headingOne">
 				<h4 class="panel-title">
 					<span class='instruction-head'>Instructions (click to expand)</span>
-					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+					<a class="collapsed" id="instructionsExpand" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
 						aria-expanded="false" aria-controls="collapseOne">
-						<img id="instructionsExpand" src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
+						<img  src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
 					</a>
 				</h4>
 			</div>
