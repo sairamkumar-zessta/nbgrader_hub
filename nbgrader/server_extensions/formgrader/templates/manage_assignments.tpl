@@ -699,7 +699,7 @@ Manage Students</a></li>
 		}
 		else {
 			$.ajax({
-				url: "formgrader/api/changecourse/" + selectedCourse,
+				url: "{{ base_url }}/formgrader/api/changecourse/" + selectedCourse,
 			}).done(function (response) {
 				console.log(response);
 				console.log(typeof (response.success))
