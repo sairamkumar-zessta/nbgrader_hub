@@ -517,6 +517,31 @@
 Manage Assignments
 <button id="exportButton" onclick="exportData()" class="arrange-export-grades">Export Grades</button>
 <button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
+<div>
+	<div class="bg-model" id="switchCourseModal">
+		<div class="course-model">
+			<div class="course-model-top-first">
+				<h1>Switch Course</h1>
+			</div>
+			<div class="arrange-row">
+				<span class="course-title">Course name</span>
+				<div id='selectouter'>
+					<div class="select-input" id="selectInput">
+						<p id="selectedListSelect" class="placeholder-div select-arrange">CourseName</p>
+						<br>
+						<div class="options-list" id="coursesListOptions">
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="instruction">Note: Restart your server for changes to apply</p>
+			<div class="course-model-bottom">
+				<button id="switchCourseCancel" class="cancel-button">Cancel</button>
+				<button id="switchCourseChange" class="change-button">Change</button>
+			</div>
+		</div>
+	</div>
+</div>
 {%- endblock -%}
 
 {%- block sidebar -%}
@@ -632,29 +657,7 @@ Manage Students</a></li>
 </tr>
 {%- endblock -%}
 {%block foot%}
-<div class="bg-model" id="switchCourseModal">
-	<div class="course-model">
-		<div class="course-model-top-first">
-			<h1>Switch Course</h1>
-		</div>
-		<div class="arrange-row">
-			<span class="course-title">Course name</span>
-			<div id='selectouter'>
-				<div class="select-input" id="selectInput">
-					<p id="selectedListSelect" class="placeholder-div select-arrange">CourseName</p>
-					<br>
-					<div class="options-list" id="coursesListOptions">
-					</div>
-				</div>
-			</div>
-		</div>
-		<p class="instruction">Note: Restart your server for changes to apply</p>
-		<div class="course-model-bottom">
-			<button id="switchCourseCancel" class="cancel-button">Cancel</button>
-			<button id="switchCourseChange" class="change-button">Change</button>
-		</div>
-	</div>
-</div>
+
 	<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span ><img class="plus-icon" src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus">Add new assignment</span></button></a>
 {%endblock%}
 {% block script%}
