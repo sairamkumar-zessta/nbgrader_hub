@@ -312,10 +312,10 @@
 	}
 
 	.arrange-switch-course{
-		margin-right: -16vw;
+		margin-right: -58vw;
 	}
 	.arrange-export-grades{
-		margin-right: -33vw;
+		margin-right: -36vw;
 	}
 	.bg-model {
 			display: none;
@@ -377,7 +377,7 @@
 
 		.course-model-bottom {
 			text-align: center;
-			margin-top: -2rem;
+			margin-top: -1rem;
 		}
 
 		.course-model-bottom button {
@@ -425,6 +425,7 @@
 			border-radius: 19px;
 			padding: 0.7rem 1rem;
 			cursor: pointer;
+			font-size: 3.6rem;
 		}
 
 		.options-list {
