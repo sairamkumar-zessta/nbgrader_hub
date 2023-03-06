@@ -23,6 +23,16 @@
             font-family: 'Poppins', sans-serif !important;
         }
 
+        .head-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 32px;
+            color: #000000;
+
+        }
+
         .jupyter-logo {
             height: 100px;
             width: 100px;
@@ -236,7 +246,7 @@
     </div>
     <div class="col-md-8">
         <div class="page-header">
-            <h1>
+            <h1 class="head-title">
                 {%- block title -%}
                 {%- endblock -%}
             </h1>
