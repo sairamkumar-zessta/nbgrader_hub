@@ -28,7 +28,6 @@
     }
 </style>
 Manual Grading
-<button id="exportButton" onclick="exportData()">Export Grades</button>
 {%- endblock -%} {%- block sidebar -%}
 <li role="presentation">
     <a href="{{ base_url }}/formgrader/manage_assignments"><svg width="20" height="17" viewBox="0 0 20 22" fill="none"
@@ -43,38 +42,5 @@ Manual Grading
         </svg>Manual Grading</a>
 </li>
 {%- endblock -%} {%- block script -%}
-<script>
-    function exportData() {
-        $.ajax({
-            url: "api/customexport",
-        }).done(function (res) {
-            console.log(res);
-            const response = JSON.parse(res);
-            if (response.length > 0) {
-                const dictionaryKeys = Object.keys(response[0]);
-                const dictValuesAsCsv = response.map((dict) =>
-                    dictionaryKeys.map((key) => dict[key]).join(",")
-                );
-                const result = [dictionaryKeys.join(","), ...dictValuesAsCsv].join("\n");
-                var today = new Date();
-                const dd = String(today.getDate()).padStart(2, "0");
-                const mm = String(today.getMonth() + 1).padStart(2, "0");
-                const yyyy = today.getFullYear();
-                today = mm + "/" + dd + "/" + yyyy;
-                const downloadLink = document.createElement("a");
-                const blob = new Blob(["\ufeff", result]);
-                const url = URL.createObjectURL(blob);
-                downloadLink.href = url;
-                downloadLink.download = "data_" + today + ".csv";
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
-            }
-            else {
-                alert("No data to export")
-            }
-        });
-    }
-</script>
 
 {%- endblock -%}

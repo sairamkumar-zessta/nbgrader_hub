@@ -298,7 +298,7 @@
 	}
 
 
-	#switch_course_btn {
+	#switch_course_btn,#exportButton{
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 600;
@@ -308,10 +308,12 @@
 		background: #5FBEF0;
 		color: #fff;
 		padding: 1rem 1.6rem;
-		/* margin-right: -16vw; */
 		border: none;
 	}
 
+	.arrange-switch-course{
+		margin-right: -16vw;
+	}
 	.bg-model {
 			display: none;
 			position: fixed;
@@ -511,7 +513,7 @@
 {%- block title -%}
 Manage Assignments
 <button id="exportButton" onclick="exportData()">Export Grades</button>
-<button id='switch_course_btn'>Switch Course</button>
+<button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
 
 <div class="bg-model" id="switchCourseModal">
 	<div class="course-model">
