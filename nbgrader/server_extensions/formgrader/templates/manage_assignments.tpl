@@ -94,12 +94,12 @@
 	}
 
 	.arrange-instructions{
-		margin-left: 24vw;
-    padding-bottom: 2.2rem;
+		margin-left: 25vw;
+    	padding-bottom: 2.2rem;
 	}
 
 	#instructions-panel-default {
-		width: 57%;
+		width: 56%;
 		border-radius: 2rem;
 		float: right;
 		border-color: #5FBEF0;
@@ -688,6 +688,7 @@ Manage Students</a></li>
 		$("#selectedListSelect").text('Course name');
 		$('.options-list').removeClass('stop-visible');
 		$('#instructions-panel-default').removeAttr('style');
+		$("#selectedListSelect").addClass('placeholder-div');
 	});
 
 	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
