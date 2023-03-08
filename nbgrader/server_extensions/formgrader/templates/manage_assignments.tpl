@@ -6,7 +6,7 @@
 <script src="{{ base_url }}/formgrader/static/js/manage_assignments.js"></script>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
-	
+
 	.instruction-head {
 		font-weight: 600;
 		font-family: 'Poppins';
@@ -93,9 +93,9 @@
 		text-align: center;
 	}
 
-	.arrange-instructions{
+	.arrange-instructions {
 		margin-left: 25vw;
-    	padding-bottom: 2.2rem;
+		padding-bottom: 2.2rem;
 	}
 
 	#instructions-panel-default {
@@ -109,7 +109,7 @@
 	}
 
 	@media (max-width: 2560px) {
-	
+
 		.footer {
 			margin-left: calc(13vw - 2rem);
 			height: 5.6rem;
@@ -158,7 +158,7 @@
 	}
 
 	@media (max-width: 2300px) {
-	
+
 
 		.page-header {
 			padding-left: calc(1.4vw - 2rem);
@@ -289,6 +289,10 @@
 		.table.table-hover {
 			font-size: 0.9rem;
 		}
+
+		.arrange-export-grades {
+			margin-right: -33vw;
+		}
 	}
 
 	@media (max-width: 1124px) {
@@ -298,7 +302,8 @@
 	}
 
 
-	#switch_course_btn,#exportButton{
+	#switch_course_btn,
+	#exportButton {
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 600;
@@ -311,211 +316,218 @@
 		border: none;
 	}
 
-	.arrange-switch-course{
+	.arrange-switch-course {
 		margin-right: -58vw;
 	}
-	.arrange-export-grades{
+
+	.arrange-export-grades {
 		margin-right: -36vw;
 	}
+
 	.bg-model {
-			display: none;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-			background-color: rgba(0, 0, 0, .2);
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, .2);
+	}
+
+	.course-model {
+		display: flex;
+		flex-direction: column;
+		background: #FFFFFF;
+		box-shadow: 0px 0.2rem 1.3rem rgba(170, 170, 170, 0.27);
+		border-radius: 1.4rem;
+		width: 43.5rem;
+		height: 25rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: animatemodal .3s;
+	}
+
+	@keyframes animatemodal {
+		0% {
+			top: -30rem;
+			opacity: 0;
 		}
 
-		.course-model {
-			display: flex;
-			flex-direction: column;
-			background: #FFFFFF;
-			box-shadow: 0px 0.2rem 1.3rem rgba(170, 170, 170, 0.27);
-			border-radius: 1.4rem;
-			width: 43.5rem;
-			height: 25rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			animation: animatemodal .3s;
+		100% {
+			top: -50%;
+			opacity: 1;
 		}
+	}
 
-		@keyframes animatemodal {
-			0% {
-				top: -30rem;
-				opacity: 0;
-			}
+	.course-model-top-first {
+		display: flex;
+		align-items: center;
+		background: #D2EDFB;
+		border-radius: 1.4rem 1.4rem 0rem 0rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		height: 4rem;
+	}
 
-			100% {
-				top: -50%;
-				opacity: 1;
-			}
-		}
+	.course-model-top-first h1 {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		color: #006BB6;
+		font-size: 1.6rem;
+		margin: 0px;
+		padding: 0.8rem 1rem;
+	}
 
-		.course-model-top-first {
-			display: flex;
-			align-items: center;
-			background: #D2EDFB;
-			border-radius: 1.4rem 1.4rem 0rem 0rem;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			height: 4rem;
-		}
+	.course-model-bottom {
+		text-align: center;
+		margin-top: -1rem;
+	}
 
-		.course-model-top-first h1 {
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 600;
-			color: #006BB6;
-			font-size: 1.6rem;
-			margin: 0px;
-			padding: 0.8rem 1rem;
-		}
+	.course-model-bottom button {
+		border-radius: 2.1rem;
+		padding: 1rem 4rem;
+		width: 15rem;
 
-		.course-model-bottom {
-			text-align: center;
-			margin-top: -1rem;
-		}
-
-		.course-model-bottom button {
-			border-radius: 2.1rem;
-			padding: 1rem 4rem;
-			width: 15rem;
-
-		}
+	}
 
 
-		.change-button {
-			border: none;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 1.6rem;
-			text-align: center;
-			color: #FFFFFF;
-			background: #5FBEF0;
-			border: 0.1rem solid #5FBEF0;
-		}
+	.change-button {
+		border: none;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.6rem;
+		text-align: center;
+		color: #FFFFFF;
+		background: #5FBEF0;
+		border: 0.1rem solid #5FBEF0;
+	}
 
-		.cancel-button {
-			background: #FFFFFF;
-			border: 0.1rem solid #5FBEF0;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 1.6rem;
-			margin-right: 2rem;
-			color: #5FBEF0;
-			text-align: center;
-			cursor: pointer;
-		}
+	.cancel-button {
+		background: #FFFFFF;
+		border: 0.1rem solid #5FBEF0;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 1.6rem;
+		margin-right: 2rem;
+		color: #5FBEF0;
+		text-align: center;
+		cursor: pointer;
+	}
 
-		.select-input {
-			position: fixed;
-			z-index: 1;
-			width: 24rem;
-			border-radius: 1.4rem;
-			background-color: #fff;
-			padding-left: 1rem;
-			border: 1px solid #5FBEF0;
-			backdrop-filter: blur(15px);
-			border-radius: 19px;
-			padding: 0.7rem 1rem;
-			cursor: pointer;
-			font-size: 3.6rem;
-		}
+	.select-input {
+		position: fixed;
+		z-index: 1;
+		width: 24rem;
+		border-radius: 1.4rem;
+		background-color: #fff;
+		padding-left: 1rem;
+		border: 1px solid #5FBEF0;
+		backdrop-filter: blur(15px);
+		border-radius: 19px;
+		padding: 0.7rem 1rem;
+		cursor: pointer;
+		font-size: 3.6rem;
+	}
 
-		.options-list {
-			display: none;
-			list-style-type: none;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 18px;
-			color: #000;
-			overflow: hidden;
-		}
+	.options-list {
+		display: none;
+		list-style-type: none;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		color: #000;
+		overflow: hidden;
+	}
 
-		.stop-visible {
-			display: block;
-			margin-top: 1rem;
-		}
+	.stop-visible {
+		display: block;
+		margin-top: 1rem;
+	}
 
-		.select-outer {
-			width: 200px;
-		}
+	.select-outer {
+		width: 200px;
+	}
 
-		.arrange-row {
-			display: flex;
-			padding: 1.6rem 3rem;
-		}
+	.arrange-row {
+		display: flex;
+		padding: 1.6rem 3rem;
+	}
 
-		.course-title {
-			margin-top: 0.6rem;
-			padding-right: 3rem;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 24px;
-			color: #263238;
-		}
-		.placeholder-div{
-			color: #AAAAAA;
-		}
-		.select-arrange {
-			background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
-			background-repeat: no-repeat;
-			background-position: 98%;
-			margin-bottom: -4.1rem;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 24px;
-			overflow: hidden;
-    	text-overflow: ellipsis;
-		}
-		.options-list li:hover{
-			color: #5FBEF0;
-			font-weight: 500;
-		}
+	.course-title {
+		margin-top: 0.6rem;
+		padding-right: 3rem;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		color: #263238;
+	}
 
-		.instruction{
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 21px;
-			color: #F7545D;
-			padding: 3rem;
-		}
+	.placeholder-div {
+		color: #AAAAAA;
+	}
 
-		.add-assign-btn{
-			background: #5FBEF0;
-			border-radius: 19px;
-			border:none;
-			font-family: 'Poppins';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 14px;
-			color:#fff;
-			padding: 0.7rem 1.6rem;
-			margin-left: 14vw;
-			margin-top: 2%;
-		}
-		.plus-icon{
-			padding-bottom: 2px;
-			padding-right: 4px;
-		}
+	.select-arrange {
+		background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
+		background-repeat: no-repeat;
+		background-position: 98%;
+		margin-bottom: -4.1rem;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.options-list li:hover {
+		color: #5FBEF0;
+		font-weight: 500;
+	}
+
+	.instruction {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: #F7545D;
+		padding: 3rem;
+	}
+
+	.add-assign-btn {
+		background: #5FBEF0;
+		border-radius: 19px;
+		border: none;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		color: #fff;
+		padding: 0.7rem 1.6rem;
+		margin-left: 14vw;
+		margin-top: 2%;
+	}
+
+	.plus-icon {
+		padding-bottom: 2px;
+		padding-right: 4px;
+	}
 </style>
 {%- endblock -%}
 {%- block title -%}
-Manage Assignments
+<h1>Manage Assignments</h1>
+<button id="exportButton" class="arrange-export-grades">Instructions</button>
 <button id="exportButton" onclick="exportData()" class="arrange-export-grades">Export Grades</button>
 <button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
 <div>
@@ -574,15 +586,15 @@ Manage Students</a></li>
 {%- endblock -%}
 
 {%- block messages -%}
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	<div class="arrange-instructions">
 		<div class="panel panel-default" id="instructions-panel-default">
 			<div class="panel-heading" role="tab" id="headingOne">
 				<h4 class="panel-title">
 					<span class='instruction-head'>Instructions (click to expand)</span>
-					<a class="collapsed" id="instructionsExpand" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-						aria-expanded="false" aria-controls="collapseOne">
-						<img  src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
+					<a class="collapsed" id="instructionsExpand" role="button" data-toggle="collapse" data-parent="#accordion"
+						href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						<img src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
 					</a>
 				</h4>
 			</div>
@@ -608,7 +620,7 @@ Manage Students</a></li>
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 {% if windows %}
 <div class="alert alert-warning" id="warning-windows">
 	Windows operating system detected. Please note that the "release" and "collect"
@@ -659,7 +671,9 @@ Manage Students</a></li>
 {%- endblock -%}
 {%block foot%}
 
-	<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span ><img class="plus-icon" src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus">Add new assignment</span></button></a>
+<a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span><img
+				class="plus-icon" src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus">Add new
+			assignment</span></button></a>
 {%endblock%}
 {% block script%}
 <script>
@@ -683,7 +697,7 @@ Manage Students</a></li>
 		loadCourses();
 	}
 
-	$('#switch_course_btn').click(()=> {
+	$('#switch_course_btn').click(() => {
 		$('#switchCourseModal').show();
 		$("#selectedListSelect").text('Course name');
 		$('.options-list').removeClass('stop-visible');
@@ -691,12 +705,12 @@ Manage Students</a></li>
 		$("#selectedListSelect").addClass('placeholder-div');
 	});
 
-	$('#switchCourseCancel').click(()=> $('#switchCourseModal').hide());
+	$('#switchCourseCancel').click(() => $('#switchCourseModal').hide());
 
-	$('#switchCourseChange').on('click',()=>{
+	$('#switchCourseChange').on('click', () => {
 		const selectedCourse = $('#selectedListSelect').text();
 		if (selectedCourse == 'Course name') {
-			$('#selectInput').css({'border': '0.1vw solid red'});
+			$('#selectInput').css({ 'border': '0.1vw solid red' });
 		}
 		else {
 			$.ajax({
@@ -714,7 +728,7 @@ Manage Students</a></li>
 	});
 
 	$('#selectouter').click(() => {
-				$('.options-list').toggleClass('stop-visible');
+		$('.options-list').toggleClass('stop-visible');
 	});
 
 	$("#selectInput").on("click", "div li", function () {
@@ -722,45 +736,45 @@ Manage Students</a></li>
 		var selectedText = $(this).attr('id');
 		$("#selectedListSelect").text(selectedText);
 		$("#selectedListSelect").removeClass('placeholder-div');
-		console.log('selectText',selectedText);
+		console.log('selectText', selectedText);
 		$('#selectInput').removeAttr('style');
 	});
 
-	$('#instructionsExpand').on("click",()=>{
-		$('#instructions-panel-default').css({'z-index': '1'});
+	$('#instructionsExpand').on("click", () => {
+		$('#instructions-panel-default').css({ 'z-index': '1' });
 	});
 
 	function exportData() {
-		console.log('baseUrl',base_url);
-        $.ajax({
-            url: "{{ base_url }}/formgrader/api/customexport",
-        }).done(function (res) {
-            console.log(res);
-            const response = JSON.parse(res);
-            if (response.length > 0) {
-                const dictionaryKeys = Object.keys(response[0]);
-                const dictValuesAsCsv = response.map((dict) =>
-                    dictionaryKeys.map((key) => dict[key]).join(",")
-                );
-                const result = [dictionaryKeys.join(","), ...dictValuesAsCsv].join("\n");
-                var today = new Date();
-                const dd = String(today.getDate()).padStart(2, "0");
-                const mm = String(today.getMonth() + 1).padStart(2, "0");
-                const yyyy = today.getFullYear();
-                today = mm + "/" + dd + "/" + yyyy;
-                const downloadLink = document.createElement("a");
-                const blob = new Blob(["\ufeff", result]);
-                const url = URL.createObjectURL(blob);
-                downloadLink.href = url;
-                downloadLink.download = "data_" + today + ".csv";
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
-            }
-            else {
-                alert("No data to export")
-            }
-        });
-  }
+		console.log('baseUrl', base_url);
+		$.ajax({
+			url: "{{ base_url }}/formgrader/api/customexport",
+		}).done(function (res) {
+			console.log(res);
+			const response = JSON.parse(res);
+			if (response.length > 0) {
+				const dictionaryKeys = Object.keys(response[0]);
+				const dictValuesAsCsv = response.map((dict) =>
+					dictionaryKeys.map((key) => dict[key]).join(",")
+				);
+				const result = [dictionaryKeys.join(","), ...dictValuesAsCsv].join("\n");
+				var today = new Date();
+				const dd = String(today.getDate()).padStart(2, "0");
+				const mm = String(today.getMonth() + 1).padStart(2, "0");
+				const yyyy = today.getFullYear();
+				today = mm + "/" + dd + "/" + yyyy;
+				const downloadLink = document.createElement("a");
+				const blob = new Blob(["\ufeff", result]);
+				const url = URL.createObjectURL(blob);
+				downloadLink.href = url;
+				downloadLink.download = "data_" + today + ".csv";
+				document.body.appendChild(downloadLink);
+				downloadLink.click();
+				document.body.removeChild(downloadLink);
+			}
+			else {
+				alert("No data to export")
+			}
+		});
+	}
 </script>
 {% endblock %}

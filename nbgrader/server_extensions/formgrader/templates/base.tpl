@@ -245,10 +245,8 @@
     </div>
     <div class="col-md-8">
         <div class="page-header">
-            <h1 class="head-title">
                 {%- block title -%}
                 {%- endblock -%}
-            </h1>
         </div>
     </div>
     </div>
