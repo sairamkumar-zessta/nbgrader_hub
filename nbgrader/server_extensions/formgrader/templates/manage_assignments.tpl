@@ -21,8 +21,8 @@
 		background-color: #FFFFFF;
 	}
 
-	div.dataTables_wrapper div.dataTables_filter input {
-		text-align: left !important;
+	div.dataTables_wrapper div.dataTables_filter {
+    text-align: left !important;
 	}
 
 	.panel-default>.panel-heading {

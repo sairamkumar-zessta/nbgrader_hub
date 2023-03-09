@@ -33,6 +33,10 @@
 		font-size: 21px;
 		color: #000000;
     }
+
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: left !important;
+	}
 </style>
 <p class="head-title"> Manual Grading </p>
 
