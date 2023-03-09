@@ -476,7 +476,7 @@
 		text-overflow: ellipsis;
 	}
 
-	.select-outer{
+	.select-outer-icon{
 		background-image: url('https://datalab-static-images.s3.ap-south-1.amazonaws.com/dropdown_close.png');
 	}
 
@@ -800,7 +800,7 @@ Manage Students</a></li>
 
 	$('#selectouter').click(() => {
 		$('.options-list').toggleClass('stop-visible');
-		$("#selectedListSelect").toggleClass('select-outer');
+		$("#selectedListSelect").toggleClass('select-outer-icon');
 		
 	});
 
