@@ -828,7 +828,7 @@ Manage Students</a></li>
 	});
 
 	$('#instructionsButton').on("click",()=>{
-		('#instructionsModal').show();
+		$('#instructionsModal').show();
 	});
 
 	function exportData() {
