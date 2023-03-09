@@ -11,10 +11,6 @@
 		font-weight: 600;
 		font-family: 'Poppins';
 	}
-/* 
-	.dataTables_filter {
-		width: 30%;
-	} */
 
 	.panel-body,
 	.panel-group {
@@ -218,10 +214,6 @@
 	}
 
 	@media (max-width: 1700px) {
-		/* div.dataTables_wrapper div.dataTables_filter input {
-			width: 19vw !important;
-			height: 3.3rem;
-		} */
 
 		.footer .add-assignment {
 			font-size: 1.3rem;
@@ -253,10 +245,6 @@
 		.table.table-hover {
 			font-size: 1.2rem;
 		}
-/* 
-		div.dataTables_wrapper div.dataTables_filter input {
-			width: 17vw !important;
-		} */
 
 	}
 
@@ -486,6 +474,10 @@
 		line-height: 24px;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+
+	.select-outer{
+		background-image: url('https://datalab-static-images.s3.ap-south-1.amazonaws.com/dropdown_close.png');
 	}
 
 	.options-list li:hover {
@@ -751,7 +743,7 @@ Manage Students</a></li>
 {%block foot%}
 
 <a href="#" onClick="createAssignmentModal();" class='add-assignment'> <button class="add-assign-btn"><span><img
-				class="plus-icon" src="https://i.postimg.cc/50QTHrdz/addicon.png" alt="plus">Add new
+				class="plus-icon" src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/add_assign.png" alt="plus">Add new
 			assignment</span></button></a>
 {%endblock%}
 {% block script%}
@@ -808,6 +800,8 @@ Manage Students</a></li>
 
 	$('#selectouter').click(() => {
 		$('.options-list').toggleClass('stop-visible');
+		$("#selectedListSelect").toggleClass('select-outer');
+		
 	});
 
 	$("#selectInput").on("click", "div li", function () {
