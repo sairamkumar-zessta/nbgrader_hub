@@ -1,4 +1,4 @@
-{%- extends 'base.tpl' -%} {%- block title -%}
+{%- extends 'base.tpl' -%} 
 <style>
     h1 {
         display: flex;
@@ -26,8 +26,17 @@
         }
 
     }
+    .head-title{
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 21px;
+		color: #000000;
+    }
 </style>
-Manual Grading
+{%- block title -%}
+<p class="head-title"> Manual Grading </p>
+
 {%- endblock -%} {%- block sidebar -%}
 <li role="presentation">
     <a href="{{ base_url }}/formgrader/manage_assignments"><svg width="20" height="17" viewBox="0 0 20 22" fill="none"

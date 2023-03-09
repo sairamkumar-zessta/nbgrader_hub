@@ -51,7 +51,7 @@
         }
 
         .title-header{
-            padding-left: calc(4vw - 2rem);
+            padding-left: calc(5vw - 2rem);
             margin: 40px 0 20px;
             display: flex;
             align-items: center
