@@ -14,7 +14,6 @@
 
 	.dataTables_filter {
 		width: 30%;
-		margin-top: -38px;
 	}
 
 	.panel-body,
@@ -303,7 +302,8 @@
 
 
 	#switch_course_btn,
-	#exportButton {
+	#exportButton,
+	#instructionsButton {
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 600;
@@ -538,6 +538,7 @@
 	.head-arrange button{
 		margin-right: 2rem;
 	}
+	
 </style>
 {%- endblock -%}
 {%- block title -%}

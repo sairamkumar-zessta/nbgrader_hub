@@ -50,7 +50,7 @@
             padding-left: calc(2vw - 2rem);
         }
 
-        title-header{
+        .title-header{
             padding-left: calc(4vw - 2rem);
             margin: 40px 0 20px;
             display: flex;
