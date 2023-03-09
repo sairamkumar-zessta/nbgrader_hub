@@ -212,7 +212,7 @@
 
 	@media (max-width: 1810px) {
 		.page-header {
-			padding-left: calc(4.6vw - 2rem);
+			padding-left: calc(2.6vw - 2rem);
 		}
 
 		.footer {
@@ -523,13 +523,31 @@
 		padding-bottom: 2px;
 		padding-right: 4px;
 	}
+
+	.head-title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 21px;
+            color: #000000;
+        }
+
+	.head-arrange{
+		margin-left: auto;
+	}
+	.head-arrange button{
+		margin-right: 2rem;
+	}
 </style>
 {%- endblock -%}
 {%- block title -%}
-<h1>Manage Assignments</h1>
-<button id="exportButton" class="arrange-export-grades">Instructions</button>
-<button id="exportButton" onclick="exportData()" class="arrange-export-grades">Export Grades</button>
-<button id='switch_course_btn' class="arrange-switch-course">Switch Course</button>
+<p class="head-title">Manage Assignments</p>
+<div class="head-arrange">
+	<button id="instructionsButton" class="arrange-btn">Instructions</button>
+	<button id="exportButton" onclick="exportData()" class="arrange-btn">Export Grades</button>
+	<button id='switch_course_btn' class="arrange-btn">Switch Course</button>
+</div>
+
 <div>
 	<div class="bg-model" id="switchCourseModal">
 		<div class="course-model">

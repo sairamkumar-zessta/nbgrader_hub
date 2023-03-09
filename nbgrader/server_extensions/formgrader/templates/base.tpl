@@ -23,14 +23,6 @@
             font-family: 'Poppins', sans-serif !important;
         }
 
-        .head-title{
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 21px;
-            color: #000000;
-        }
-
         .jupyter-logo {
             height: 100px;
             width: 100px;
@@ -55,8 +47,14 @@
         }
 
         .page-header {
-            border-bottom: none;
+            padding-left: calc(2vw - 2rem);
+        }
+
+        title-header{
             padding-left: calc(4vw - 2rem);
+            margin: 40px 0 20px;
+            display: flex;
+            align-items: center
         }
 
         .page-header:nth-of-type(2) {
@@ -243,8 +241,8 @@
                 career-logo' />
         </div>
     </div>
-    <div class="col-md-8">
-        <div class="page-header">
+    <div class="col-md-10">
+        <div class="title-header">
                 {%- block title -%}
                 {%- endblock -%}
         </div>
