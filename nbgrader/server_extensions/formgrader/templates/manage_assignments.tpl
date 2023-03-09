@@ -11,21 +11,21 @@
 		font-weight: 600;
 		font-family: 'Poppins';
 	}
-
+/* 
 	.dataTables_filter {
 		width: 30%;
-	}
+	} */
 
 	.panel-body,
 	.panel-group {
 		background-color: #FFFFFF;
 	}
 
-	div.dataTables_wrapper div.dataTables_filter input {
+	/* div.dataTables_wrapper div.dataTables_filter input {
 		width: 20vw !important;
 		border-radius: 2rem;
 		height: 3.8rem;
-	}
+	} */
 
 	.panel-default>.panel-heading {
 		background-color: #FFFFFF;
@@ -220,10 +220,10 @@
 	}
 
 	@media (max-width: 1700px) {
-		div.dataTables_wrapper div.dataTables_filter input {
+		/* div.dataTables_wrapper div.dataTables_filter input {
 			width: 19vw !important;
 			height: 3.3rem;
-		}
+		} */
 
 		.footer .add-assignment {
 			font-size: 1.3rem;
@@ -255,10 +255,10 @@
 		.table.table-hover {
 			font-size: 1.2rem;
 		}
-
+/* 
 		div.dataTables_wrapper div.dataTables_filter input {
 			width: 17vw !important;
-		}
+		} */
 
 	}
 
