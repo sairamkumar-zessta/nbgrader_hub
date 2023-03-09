@@ -605,7 +605,7 @@
 		line-height: 21px;
 		color: #000000;
 		margin-top: 16px;
-		margin-left: 34px;
+		margin-right: 34px;
 	}
 </style>
 {%- endblock -%}

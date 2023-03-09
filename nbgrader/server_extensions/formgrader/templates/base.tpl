@@ -109,10 +109,6 @@
             display: none;
         }
 
-        .dataTables_filter {
-            text-align: left !important;
-        }
-
         .form-control.input-sm {
             border-color: #5FBEF0;
             border-radius: 25px;
