@@ -432,7 +432,7 @@
 		border-radius: 19px;
 		padding: 0.7rem 1rem;
 		cursor: pointer;
-		font-size: 3.6rem;
+		font-size: 3rem;
 	}
 
 	.options-list {
@@ -515,7 +515,7 @@
 		font-size: 14px;
 		color: #fff;
 		padding: 0.7rem 1.6rem;
-		margin-left: 14vw;
+		margin-left: 15vw;
 		margin-top: 2%;
 	}
 
@@ -524,21 +524,91 @@
 		padding-right: 4px;
 	}
 
-	.head-title{
+	.head-title {
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 600;
 		font-size: 21px;
 		color: #000000;
-    }
+	}
 
-	.head-arrange{
+	.head-arrange {
 		margin-left: auto;
 	}
-	.head-arrange button{
+
+	.head-arrange button {
 		margin-right: 2rem;
 	}
-	
+
+	.instructions-model {
+		background: #FFFFFF;
+		box-shadow: 0px 0.2rem 1.3rem rgba(170, 170, 170, 0.27);
+		border-radius: 16px;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		width: 808px;
+		height: 324px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: animatemodal .3s;
+	}
+
+	@keyframes animatemodal {
+		0% {
+			top: -30rem;
+			opacity: 0;
+		}
+
+		100% {
+			top: -50%;
+			opacity: 1;
+		}
+	}
+
+
+	.instructions-model-top-first {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem 2rem;
+		background: #D6F0FF;
+		backdrop-filter: blur(15px);
+		border-radius: 15px 15px 0px 0px;
+	}
+
+	.instructions-title {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		/* identical to box height */
+		color: #006BB6;
+
+	}
+
+	#instructionsCancel {
+		font-size: 1.85rem;
+		text-align: center;
+		color: #006BB6;
+		font-weight: 600;
+		cursor: pointer;
+		height: 1rem;
+		width: 1rem;
+	}
+
+	.instructions-list-flow {
+		font-family: 'Gothic A1';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		/* or 150% */
+		color: #000000;
+		padding-left: 34px;
+	}
 </style>
 {%- endblock -%}
 {%- block title -%}
@@ -573,6 +643,35 @@
 			</div>
 		</div>
 	</div>
+	<div class="bg-model" id="instructionsModal">
+		<div class="instructions-model">
+			<div>
+				<div class="instructions-model-top-first">
+					<span class="instructions-title">Instructions</span>
+					<div>
+						<span id="instructionsCancel">&times;</span>
+					</div>
+				</div>
+			</div>
+			<ol class="instructions-list-flow">
+				<li>To <b>create</b> an assignment, click the "Add new assignment..." button below.</li>
+				<li>To <b>edit assignment files</b>, click on the name of an assignment.</li>
+				<li>To <b>edit the assignment metadata</b>, click on the edit button.</li>
+				<li>To <b>generate</b> the student version of an assignment, click on the generate button.</li>
+				<li>To <b>preview</b> the student version of an assignment, click on the preview button.</li>
+				<li><i>(JupyterHub only)</i> To <b>release</b> the assignment to students, click the release button.
+					You can "unrelease" an assignment by clicking again, though note some students may have
+					already accessed the assignment. <b>Note</b> that for the release button to become
+					available, the <code>course_id</code> option must be set in <code>nbgrader_config.py</code>.
+					For details, see <a href="http://nbgrader.readthedocs.io/en/stable/configuration/config_options.html">the
+						documentation</a>.</li>
+				<li><i>(JupyterHub only)</i> To <b>collect</b> assignments, click the collect button.</li>
+				<li>To <b>autograde</b> submissions, click on the number of collected submissions. You must run
+					the autograder on the submissions before you can manually grade them.</li>
+			</ol>
+
+		</div>
+	</div>
 </div>
 {%- endblock -%}
 
@@ -605,41 +704,6 @@ Manage Students</a></li>
 {%- endblock -%}
 
 {%- block messages -%}
-<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	<div class="arrange-instructions">
-		<div class="panel panel-default" id="instructions-panel-default">
-			<div class="panel-heading" role="tab" id="headingOne">
-				<h4 class="panel-title">
-					<span class='instruction-head'>Instructions (click to expand)</span>
-					<a class="collapsed" id="instructionsExpand" role="button" data-toggle="collapse" data-parent="#accordion"
-						href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-						<img src="https://datalab-static-images.s3.ap-south-1.amazonaws.com/expand.png" />
-					</a>
-				</h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-				<div class="panel-body">
-					<ol>
-						<li>To <b>create</b> an assignment, click the "Add new assignment..." button below.</li>
-						<li>To <b>edit assignment files</b>, click on the name of an assignment.</li>
-						<li>To <b>edit the assignment metadata</b>, click on the edit button.</li>
-						<li>To <b>generate</b> the student version of an assignment, click on the generate button.</li>
-						<li>To <b>preview</b> the student version of an assignment, click on the preview button.</li>
-						<li><i>(JupyterHub only)</i> To <b>release</b> the assignment to students, click the release button.
-							You can "unrelease" an assignment by clicking again, though note some students may have
-							already accessed the assignment. <b>Note</b> that for the release button to become
-							available, the <code>course_id</code> option must be set in <code>nbgrader_config.py</code>.
-							For details, see <a href="http://nbgrader.readthedocs.io/en/stable/configuration/config_options.html">the
-								documentation</a>.</li>
-						<li><i>(JupyterHub only)</i> To <b>collect</b> assignments, click the collect button.</li>
-						<li>To <b>autograde</b> submissions, click on the number of collected submissions. You must run
-							the autograder on the submissions before you can manually grade them.</li>
-					</ol>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 {% if windows %}
 <div class="alert alert-warning" id="warning-windows">
 	Windows operating system detected. Please note that the "release" and "collect"
@@ -763,6 +827,10 @@ Manage Students</a></li>
 		$('#instructions-panel-default').css({ 'z-index': '1' });
 	});
 
+	$('#instructionsButton').on("click",()=>{
+		('#instructionsModal').show();
+	});
+
 	function exportData() {
 		console.log('baseUrl', base_url);
 		$.ajax({
@@ -797,3 +865,4 @@ Manage Students</a></li>
 	}
 </script>
 {% endblock %}
+

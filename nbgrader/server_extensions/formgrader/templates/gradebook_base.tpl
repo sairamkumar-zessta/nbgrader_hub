@@ -1,4 +1,4 @@
-{%- extends 'base.tpl' -%} 
+{%- extends 'base.tpl' -%} {%- block title -%}
 <style>
     h1 {
         display: flex;
@@ -34,7 +34,6 @@
 		color: #000000;
     }
 </style>
-{%- block title -%}
 <p class="head-title"> Manual Grading </p>
 
 {%- endblock -%} {%- block sidebar -%}
