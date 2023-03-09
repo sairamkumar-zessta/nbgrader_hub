@@ -21,11 +21,9 @@
 		background-color: #FFFFFF;
 	}
 
-	/* div.dataTables_wrapper div.dataTables_filter input {
-		width: 20vw !important;
-		border-radius: 2rem;
-		height: 3.8rem;
-	} */
+	div.dataTables_wrapper div.dataTables_filter input {
+		text-align: left !important;
+	}
 
 	.panel-default>.panel-heading {
 		background-color: #FFFFFF;
