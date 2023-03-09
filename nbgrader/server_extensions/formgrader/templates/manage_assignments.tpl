@@ -495,6 +495,16 @@
 		font-weight: 500;
 	}
 
+	.instruction {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: #F7545D;
+		padding: 3rem;
+	}
+
 	.add-assign-btn {
 		background: #5FBEF0;
 		border-radius: 19px;
@@ -595,7 +605,7 @@
 		line-height: 21px;
 		color: #000000;
 		margin-top: 16px;
-		margin-right: 34px;
+		margin-left: 34px;
 	}
 </style>
 {%- endblock -%}
@@ -818,11 +828,9 @@ Manage Students</a></li>
 	$('#instructionsButton').on("click",()=>{
 		$('#instructionsModal').show();
 	});
-
 	$('#instructionsCancel').on("click",()=>{
 		$('#instructionsModal').hide();
 	});
-
 
 	function exportData() {
 		console.log('baseUrl', base_url);
