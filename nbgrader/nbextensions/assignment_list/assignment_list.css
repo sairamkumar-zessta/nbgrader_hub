@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+#assignments{
+    margin-top: 10px;
+}
 #assignments .panel-group .panel {
-    margin-top: 3px;
-    margin-bottom: 1em;
+    margin-top: 5px;
 }
 
 #assignments .panel-group .panel .panel-heading {
@@ -149,12 +151,12 @@
 .panel-heading{
     border-top-left-radius:10px;
     border-top-right-radius:10px;
-    font-weight:600;
+    font-weight:500;
     padding-left:20px !important;
     padding-top:10px !important;
     padding-bottom:10px !important;
     font-family:'Poppins';
-    font-size:16px;
+    font-size:14px;
     background-color: #D2EDFB !important;
 }
 #assignments .list_loading, #assignments .list_error{
@@ -212,7 +214,12 @@
 	margin-top:10px !important;
 }
 .no-padding {
-    padding: 10px;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
 }
 .list_toolbar .tree-buttons {
     padding-top: 0px;
@@ -244,11 +251,12 @@
  #assignments .fa.fa-refresh{
     color:#5FBEF0;
 }
-#released_assignments_list_placeholder>div{
+/* #released_assignments_list_placeholder>div{
     font-size: 0.8vw;
-}
+} */
 .panel-body{
     padding:10px !important;
+    padding-left: 20px !important;
     background-color:#FFFFFF;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
