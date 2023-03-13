@@ -2,18 +2,33 @@
 
 {%- block head -%}
 <script>
-var assignment_id = "{{ assignment_id }}";
+  var assignment_id = "{{ assignment_id }}";
 </script>
 
 <script src="{{ base_url }}/formgrader/static/js/manage_submissions.js"></script>
+<style>
+  .head-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    color: #000000;
+  }
+
+  div.dataTables_wrapper div.dataTables_filter {
+    text-align: left !important;
+  }
+</style>
 {%- endblock head -%}
 
+
+
 {%- block title -%}
-Manage Submissions
+<p class="head-title">Manage Submissions</p>
 {%- endblock -%}
 
 {%- block sidebar -%}
-<li role="presentation" class="active"><a href="{{ base_url }}/formgrader/manage_assignments">Manage Assignments</a></li>
+<li role="presentation" class="active"><a href="{{ base_url }}/formgrader/manage_assignments">Assignments</a></li>
 <li role="presentation"><a href="{{ base_url }}/formgrader/gradebook">Manual Grading</a></li>
 {%- endblock -%}
 
@@ -24,7 +39,7 @@ Manage Submissions
 </ol>
 {%- endblock -%}
 
-{%- block messages -%}
+<!-- {%- block messages -%}
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
@@ -51,7 +66,7 @@ nbgrader autograde "{{ assignment_id }}"</pre>
     </div>
   </div>
 </div>
-{%- endblock -%}
+{%- endblock -%} -->
 
 {%- block table_header -%}
 <tr>

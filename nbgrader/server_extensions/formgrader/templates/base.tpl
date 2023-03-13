@@ -34,7 +34,7 @@
 
        .col-md-2.sidenav {
             border-radius: 1.5rem !important;
-            background: #777AB7;
+            background: #006BB6;
             width: 14%;
             margin-left: 0.5%;
             padding-top: 0;
