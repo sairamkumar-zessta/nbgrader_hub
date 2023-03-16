@@ -2,9 +2,6 @@
 #assignments{
     margin-top: 20px;
 }
-/* #assignments .panel-group .panel {
-    margin-top: 5px;
-} */
 
 #assignments .panel-group .panel .panel-heading {
     background-color: #eee;
@@ -105,7 +102,7 @@
     padding-right: 7px;
 }
 
-###custom.css
+#custom.css
 
 #course_list_default{
     border-color:#5FBEF0;

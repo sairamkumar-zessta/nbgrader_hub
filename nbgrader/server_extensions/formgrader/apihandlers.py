@@ -5,13 +5,8 @@ from tornado import web
 import psycopg2
 from pathlib import Path
 from .base import BaseApiHandler, check_xsrf, check_notebook_dir
-from ...api import MissingEntry, Gradebook
-from pytz import utc
-import pandas as pd
-import boto3
+from ...api import MissingEntry
 import datetime
-from io import StringIO  
-import requests
 
 class StatusHandler(BaseApiHandler):
     @web.authenticated
@@ -434,10 +429,6 @@ class ChangeCourseHandler(BaseApiHandler):
                 'Content-Type': 'application/json',
                 'Authorization': 'token 1199d73de2bc4d37900e19c6539833e4'
                 }
-#             serverUrl='https://data-labs.hcl-edtech.com/hub/api/users/'+userName+'/server'
-#             stopServerResponse = requests.delete(serverUrl, headers=hubHeaders)
-#             if(stopServerResponse.status_code==204):
-#                 startServerResponse=requests.post(serverUrl,headers=hubHeaders)
             self.write(json.dumps({'success':True,'userName':userName,'course':courseName}))
         except:
             self.write(json.dumps({'success':False})) 
