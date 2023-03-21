@@ -28,10 +28,6 @@
             width: 100px;
         }
 
-        .col-md-2 {
-            width: 12%;
-        }
-
        .col-md-2.sidenav {
             border-radius: 1.5rem !important;
             background: #006BB6;
