@@ -127,7 +127,7 @@
 
         th,
         td {
-            padding-left: 2rem !important;
+            padding-left: 1rem !important;
             padding-right: 2rem !important;
             text-align: center;
         }
