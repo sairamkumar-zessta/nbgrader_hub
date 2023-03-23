@@ -129,9 +129,11 @@ class SubmissionHandler(BaseHandler):
 class SubmissionNavigationHandler(BaseHandler):
 
     def _assignment_notebook_list_url(self, assignment_id, notebook_id):
+        print('_assignment_notebook_list_url')
         return '{}/formgrader/gradebook/{}/{}'.format(self.base_url, assignment_id, notebook_id)
 
     def _submission_url(self, submission_id):
+        print('submission_url')
         url = '{}/formgrader/submissions/{}'.format(self.base_url, submission_id)
         if self.get_argument('index', default=None) is not None:
             return "{}?index={}".format(url, self.get_argument('index'))
@@ -139,11 +141,13 @@ class SubmissionNavigationHandler(BaseHandler):
             return url
 
     def _get_submission_ids(self, assignment_id, notebook_id):
+        print('_get_submission_ids')
         notebooks = self.gradebook.notebook_submissions(notebook_id, assignment_id)
         submissions = self.api._filter_existing_notebooks(assignment_id, notebooks)
         return sorted([x.id for x in submissions])
 
     def _get_incorrect_submission_ids(self, assignment_id, notebook_id, submission):
+        print('_get_incorrect_submission_ids')
         notebooks = self.gradebook.notebook_submissions(notebook_id, assignment_id)
         submissions = self.api._filter_existing_notebooks(assignment_id, notebooks)
         incorrect_ids = set([x.id for x in submissions if x.failed_tests])
@@ -152,6 +156,7 @@ class SubmissionNavigationHandler(BaseHandler):
         return incorrect_ids
 
     def _next(self, assignment_id, notebook_id, submission):
+        print('_next')
         # find next submission
         submission_ids = self._get_submission_ids(assignment_id, notebook_id)
         ix = submission_ids.index(submission.id)
@@ -161,6 +166,7 @@ class SubmissionNavigationHandler(BaseHandler):
             return self._submission_url(submission_ids[ix + 1])
 
     def _prev(self, assignment_id, notebook_id, submission):
+        print('_prev')
         # find previous submission
         submission_ids = self._get_submission_ids(assignment_id, notebook_id)
         ix = submission_ids.index(submission.id)
@@ -170,6 +176,7 @@ class SubmissionNavigationHandler(BaseHandler):
             return self._submission_url(submission_ids[ix - 1])
 
     def _next_incorrect(self, assignment_id, notebook_id, submission):
+        print('_next_incorrect')
         # find next incorrect submission
         submission_ids = self._get_incorrect_submission_ids(assignment_id, notebook_id, submission)
         ix_incorrect = submission_ids.index(submission.id)
@@ -179,6 +186,7 @@ class SubmissionNavigationHandler(BaseHandler):
             return self._submission_url(submission_ids[ix_incorrect + 1])
 
     def _prev_incorrect(self, assignment_id, notebook_id, submission):
+        print('_prev_incorrect')
         # find previous incorrect submission
         submission_ids = self._get_incorrect_submission_ids(assignment_id, notebook_id, submission)
         ix_incorrect = submission_ids.index(submission.id)
@@ -191,6 +199,7 @@ class SubmissionNavigationHandler(BaseHandler):
     @check_xsrf
     @check_notebook_dir
     def get(self, submission_id, action):
+        print('get')
         try:
             submission = self.gradebook.find_submission_notebook_by_id(submission_id)
             assignment_id = submission.assignment.assignment.name
