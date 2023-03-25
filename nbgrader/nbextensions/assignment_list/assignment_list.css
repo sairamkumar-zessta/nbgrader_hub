@@ -245,6 +245,9 @@
     font-size:14px;
     color:#FFFFFF;
 }
+.no-padding{
+    padding: 10px;
+}
  #assignments .fa.fa-refresh{
     color:#5FBEF0;
 }
