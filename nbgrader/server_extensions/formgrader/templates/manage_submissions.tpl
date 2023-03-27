@@ -7,6 +7,18 @@
 
 <script src="{{ base_url }}/formgrader/static/js/manage_submissions.js"></script>
 <style>
+  .arrange-btn{
+    font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		text-align: center;
+		border-radius: 21px;
+		background: #5FBEF0;
+		color: #fff;
+		padding: 1rem 1.6rem;
+		border: none;
+  }
   .head-title {
     font-family: 'Poppins';
     font-style: normal;
@@ -45,7 +57,7 @@
 		position: absolute;
 		transform: translate(-50%, -50%);
 		width: 808px;
-		height: 324px;
+		height: 200px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -105,17 +117,17 @@
 <div class="head-arrange">
 	<button id="instructionsButtonNext" class="arrange-btn">Instructions</button>
 </div>
-<div class="bg-model" id="instructionsModal">
+<div class="bg-model" id="instructionsSubmissionModal">
   <div class="instructions-model">
     <div>
       <div class="instructions-model-top-first">
         <span class="instructions-title">Instructions</span>
         <div>
-          <span id="instructionsCancel">&times;</span>
+          <span id="instructionsSubmissionCancel">&times;</span>
         </div>
       </div>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="panel-collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         <p>
           <b>Note:</b> Here you can autograde individual students' submissions by
@@ -173,4 +185,14 @@ nbgrader autograde "{{ assignment_id }}"</pre>
   <td></td>
   <td></td>
 </tr>
+{%- endblock -%}
+{% block script%}
+<script>
+  $('#instructionsSubmissionCancel').click(()=>{
+    $('#instructionsSubmissionModal').hide();
+  });
+  $('#instructionsButtonNext').click(()=>{
+    $('#instructionsSubmissionModal').show();
+  });
+</script>
 {%- endblock -%}
