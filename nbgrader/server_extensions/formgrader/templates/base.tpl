@@ -100,7 +100,6 @@
         }
 
       .career-logo {
-            width: calc(10vw - 2rem);
             height: 5rem;
         }
 
@@ -152,7 +151,6 @@
 			width: 11%;
 		}
 		.career-logo {
-		    width: calc(11vw - 2rem);
 		    height: 7rem;
 		}
 		
@@ -174,7 +172,6 @@
     width: 14%;
 }
 .career-logo {
-    width: calc(10vw - 2rem);
     height: 5rem;
 }
 }
