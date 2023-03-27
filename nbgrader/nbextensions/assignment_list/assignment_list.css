@@ -113,9 +113,9 @@
     font-size:15px;
     font-weight:600;
 }
-#course_list_default:hover{
+/* #course_list_default:hover{
     background-color:white;
-}
+} */
 #course_list_dropdown{
     border:none;
     margin-left: -30px;
