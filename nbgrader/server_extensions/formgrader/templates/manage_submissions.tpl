@@ -97,7 +97,7 @@
 		color: #006BB6;
 	}
 
-	#instructionsCancel {
+	#instructionsSubmissionCancel {
 		font-size: 2rem;
 		text-align: center;
 		color: #006BB6;
@@ -106,7 +106,6 @@
 		height: 1rem;
 		width: 1rem;
 	}
-
 </style>
 {%- endblock head -%}
 
