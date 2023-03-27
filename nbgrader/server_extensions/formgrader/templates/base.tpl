@@ -44,11 +44,14 @@
 
         .page-header {
             padding-left: calc(2vw - 2rem);
+            padding-bottom: 0px;
+            margin: 40px 0px;
+            border-width:0px;
         }
 
         .title-header{
-            padding-left: calc(5vw - 2rem);
             margin: 40px 0 20px;
+            margin-left: -1vw;
             display: flex;
             align-items: center
         }
