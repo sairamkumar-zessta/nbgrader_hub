@@ -422,6 +422,9 @@
 		padding: 0.7rem 1rem;
 		cursor: pointer;
 		font-size: 3rem;
+		background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
+		background-repeat: no-repeat;
+		background-position: 94%;
 	}
 
 	.options-list {
@@ -466,9 +469,6 @@
 	}
 
 	.select-arrange {
-		background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
-		background-repeat: no-repeat;
-		background-position: 98%;
 		margin-bottom: -4.1rem;
 		font-family: 'Poppins';
 		font-style: normal;
@@ -476,7 +476,7 @@
 		font-size: 16px;
 		line-height: 24px;
 		overflow: hidden;
-		text-overflow: ellipsis;
+		max-width:198px;
 	}
 
 	.select-outer-icon{
@@ -803,7 +803,7 @@ Manage Students</a></li>
 
 	$('#selectouter').click(() => {
 		$('.options-list').toggleClass('stop-visible');
-		$("#selectedListSelect").toggleClass('select-outer-icon');
+		$("#selectInput").toggleClass('select-outer-icon');
 		
 	});
 
