@@ -810,8 +810,8 @@ Manage Students</a></li>
 	$("#selectInput").on("click", "div li", function () {
 		switchCourseNameAdd = $(this).attr('id');
 		var selectedText = $(this).attr('id');
-		if(selectedText.length > 20){
-			selectedText = selectedText.slice(0,21);
+		if(selectedText.length > 18){
+			selectedText = selectedText.slice(0,19);
 		}
 		$("#selectedListSelect").text(selectedText);
 		$("#selectedListSelect").removeClass('placeholder-div');
