@@ -422,9 +422,6 @@
 		padding: 0.7rem 1rem;
 		cursor: pointer;
 		font-size: 3rem;
-		background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
-		background-repeat: no-repeat;
-		background-position: 94%;
 	}
 
 	.options-list {
@@ -469,6 +466,9 @@
 	}
 
 	.select-arrange {
+		background-image: url(https://datalab-static-images.s3.ap-south-1.amazonaws.com/admin_expand.png);
+		background-repeat: no-repeat;
+		background-position: 98%;
 		margin-bottom: -4.1rem;
 		font-family: 'Poppins';
 		font-style: normal;
@@ -476,7 +476,7 @@
 		font-size: 16px;
 		line-height: 24px;
 		overflow: hidden;
-		max-width:198px;
+		text-overflow: ellipsis;
 	}
 
 	.select-outer-icon{
@@ -753,7 +753,7 @@ Manage Students</a></li>
 <script>
 	const hub_url = window.location.href.split('user')[0];
 	const ngshare_url = hub_url + 'services/ngshare/';
-
+	let switchCourseNameAdd = 'Course name';
 	window.onload = function () {
 		const loadCourses = async () => {
 			const response = await fetch(`${ngshare_url}/courses`);
@@ -782,7 +782,7 @@ Manage Students</a></li>
 	$('#switchCourseCancel').click(() => $('#switchCourseModal').hide());
 
 	$('#switchCourseChange').on('click', () => {
-		const selectedCourse = $('#selectedListSelect').text();
+		const selectedCourse = switchCourseNameAdd;
 		if (selectedCourse == 'Course name') {
 			$('#selectInput').css({ 'border': '0.1vw solid red' });
 		}
@@ -803,13 +803,16 @@ Manage Students</a></li>
 
 	$('#selectouter').click(() => {
 		$('.options-list').toggleClass('stop-visible');
-		$("#selectInput").toggleClass('select-outer-icon');
+		$("#selectedListSelect").toggleClass('select-outer-icon');
 		
 	});
 
 	$("#selectInput").on("click", "div li", function () {
-		console.log('entered');
+		switchCourseNameAdd = $(this).attr('id');
 		var selectedText = $(this).attr('id');
+		if(selectedText.length > 20){
+			selectedText = selectedText.slice(0,21);
+		}
 		$("#selectedListSelect").text(selectedText);
 		$("#selectedListSelect").removeClass('placeholder-div');
 		console.log('selectText', selectedText);
