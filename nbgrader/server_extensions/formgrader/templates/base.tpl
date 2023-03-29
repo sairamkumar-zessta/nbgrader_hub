@@ -1,7 +1,7 @@
 <!doctype html>
 
 <head>
-    <title>nbgrader formgrade</title>
+    <title>Ds lab</title>
     <script src="{{ base_url }}/formgrader/static/components/jquery/jquery.min.js"></script>
     <script src="{{ base_url }}/formgrader/static/components/underscore/underscore-min.js"></script>
     <script src="{{ base_url }}/formgrader/static/components/backbone/backbone-min.js"></script>
