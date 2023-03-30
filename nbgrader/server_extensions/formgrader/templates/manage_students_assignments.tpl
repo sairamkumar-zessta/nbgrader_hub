@@ -10,7 +10,7 @@ var student_id = "{{ student_id }}";
 
 {%- block breadcrumbs -%}
 <ol class="breadcrumb">
-  <li><a href="{{ base_url }}/formgrader/manage_students">Students</a></li>
+  <li>Students</li>
   <li class="active">{{ student_id }}</li>
 </ol>
 {%- endblock -%}

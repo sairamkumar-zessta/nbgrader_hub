@@ -1,4 +1,5 @@
 {%- extends 'base.tpl' -%}
+{%- block head -%}
 <style>
      div.dataTables_wrapper div.dataTables_filter {
         text-align: left !important;
@@ -12,6 +13,7 @@
     color: #000000;
   }
 </style>
+{%- endblock -%}
 {%- block title -%}
 <p class="head-title">Manage Students</p>
 {%- endblock -%}
