@@ -13,7 +13,7 @@
     color: #000000;
   }
 </style>
-{%- endblock -%}
+{%- endblock head-%}
 {%- block title -%}
 <p class="head-title">Manage Students</p>
 {%- endblock -%}
