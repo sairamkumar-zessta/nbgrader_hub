@@ -256,7 +256,7 @@
         <div class="col-md-2 sidenav">
             <ul class="nav nav-pills nav-stacked">
                 {%- block sidebar -%}
-                <li role="presentation"><a href="{{ base_url }}/formgrader/manage_assignments">Manage Assignments</a>
+                <li role="presentation"><a href="{{ base_url }}/formgrader/manage_assignments">Assignments</a>
                 </li>
                 <li role="presentation"><a href="{{ base_url }}/formgrader/gradebook">Gradebook</a></li>
                 {%- endblock -%}

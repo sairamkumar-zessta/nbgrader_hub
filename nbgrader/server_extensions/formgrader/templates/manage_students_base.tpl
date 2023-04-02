@@ -1,19 +1,4 @@
 {%- extends 'base.tpl' -%}
-{%- block head -%}
-<style>
-     div.dataTables_wrapper div.dataTables_filter {
-        text-align: left !important;
-    }
-
-    .head-title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 21px;
-    color: #000000;
-  }
-</style>
-{%- endblock head-%}
 {%- block title -%}
 <p class="head-title">Manage Students</p>
 {%- endblock -%}
