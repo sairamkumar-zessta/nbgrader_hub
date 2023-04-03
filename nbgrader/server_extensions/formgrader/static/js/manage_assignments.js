@@ -50,11 +50,7 @@ var AssignmentUI = Backbone.View.extend({
         var duedate = $("<tr/>");
         body.append(duedate);
         duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-        // Get the current date-time in ISO format (e.g. 2023-04-02T12:34)
-        let now = new Date().toISOString().slice(0, 16);
-
-        // Create a new input field with the current date-time value
-        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local").attr("value", now)));
+        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local")));
 
         var timezone = $("<tr/>");
         body.append(timezone);
@@ -541,12 +537,7 @@ var createAssignmentModal = function () {
     var duedate = $("<tr/>");
     table.append(duedate);
     duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-    // Get the current date-time in ISO format (e.g. 2023-04-02T12:34)
-    let now = new Date().toISOString().slice(0, 16);
-
-    // Create a new input field with the current date-time value
-    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr("value", now)));
-
+    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local")));
 
     var timezone = $("<tr/>");
     table.append(timezone);
