@@ -595,11 +595,15 @@ $(document).ready(function() {
     var day = today.getDate();
     var hours = today.getHours();
     var minutes = today.getMinutes();
-    var seconds = today.getSeconds();
+
+    // Format date and time values as strings
+    var formattedMonth = month.toString().padStart(2, '0');
+    var formattedDay = day.toString().padStart(2, '0');
+    var formattedHours = hours.toString().padStart(2, '0');
+    var formattedMinutes = minutes.toString().padStart(2, '0');
+    var dateTimeString = year + '-' + formattedMonth + '-' + formattedDay + 'T' + formattedHours + ':' + formattedMinutes;
 
     // Set minimum date and time in datetime-local input field
-    var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
-    var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
-    var minDateTime = minDate + 'T' + minTime;
-    $('.duedate').attr('min', minDateTime);
+    $('.duedate').attr('min', dateTimeString);
 });
+
