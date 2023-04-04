@@ -545,13 +545,12 @@ var createAssignmentModal = function () {
     // Set minimum date and time in datetime-local input field
     var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
     var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
-    var minDateTime = minDate + 'T' + minTime;
-    // $('#assignmentDueDate').attr('min', minDateTime);
+    var minDateTime = minDate 
 
     var duedate = $("<tr/>");
     table.append(duedate);
     duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate").attr('min', minDateTime)));
+    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr('min', minDateTime)));
 
     var timezone = $("<tr/>");
     table.append(timezone);
