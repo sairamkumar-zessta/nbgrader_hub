@@ -23,7 +23,6 @@ var notebook_id = "{{ notebook_id }}";
   <th>Submission ID</th>
   <th class="text-center">Overall Score</th>
   <th class="text-center">Code Score</th>
-  <th class="text-center">Written Score</th>
   <th class="text-center">Task Score</th>
   <th class="text-center">Needs Manual Grade?</th>
   <th class="text-center">Tests Failed?</th>

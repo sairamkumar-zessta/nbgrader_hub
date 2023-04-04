@@ -20,7 +20,6 @@ var student_id = "{{ student_id }}";
   <th>Assignment ID</th>
   <th class="text-center">Overall Score</th>
   <th class="text-center">Code Score</th>
-  <th class="text-center">Written Score</th>
   <th class="text-center">Task Score</th>
   <th class="text-center">Needs Manual Grade?</th>
 </tr>

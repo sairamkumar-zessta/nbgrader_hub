@@ -96,7 +96,7 @@ var insertRow = function (table) {
     row.append($("<td/>").addClass("name"));
     row.append($("<td/>").addClass("text-center avg-score"));
     row.append($("<td/>").addClass("text-center avg-code-score"));
-    row.append($("<td/>").addClass("text-center avg-written-score"));
+    // row.append($("<td/>").addClass("text-center avg-written-score"));
     row.append($("<td/>").addClass("text-center avg-task-score"));
     row.append($("<td/>").addClass("text-center needs-manual-grade"));
     table.append(row)

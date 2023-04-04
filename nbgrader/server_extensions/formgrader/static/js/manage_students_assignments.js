@@ -102,7 +102,7 @@ var insertRow = function (table) {
     row.append($("<td/>").addClass("name"));
     row.append($("<td/>").addClass("text-center score"));
     row.append($("<td/>").addClass("text-center code-score"));
-    row.append($("<td/>").addClass("text-center written-score"));
+    // row.append($("<td/>").addClass("text-center written-score"));
     row.append($("<td/>").addClass("text-center task-score"));
     row.append($("<td/>").addClass("text-center needs-manual-grade"));
     table.append(row)
