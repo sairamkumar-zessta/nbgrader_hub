@@ -875,9 +875,9 @@ Manage Students</a></li>
 	var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
 	var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
 	var minDateTime = minDate + 'T' + minTime;
-	$('.duedate').attr('min', minDateTime);
+	$('#assignmentDueDate').attr('min', minDateTime);
 
-	console.log('HTML',$('.duedate'))
+	console.log('HTML',$('#assignmentDueDate'))
 	</script>
 	{% endblock %}
 

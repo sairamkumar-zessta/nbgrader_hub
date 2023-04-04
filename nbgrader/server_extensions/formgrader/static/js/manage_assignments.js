@@ -50,7 +50,7 @@ var AssignmentUI = Backbone.View.extend({
         var duedate = $("<tr/>");
         body.append(duedate);
         duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local")));
+        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate")));
 
         var timezone = $("<tr/>");
         body.append(timezone);
@@ -587,4 +587,4 @@ $(window).load(function () {
     loadAssignments();
 });
 
-console.log('JS',$('.duedate'))
+console.log('JS',$('#assignmentDueDate'))
