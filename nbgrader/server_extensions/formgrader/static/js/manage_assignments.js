@@ -50,7 +50,7 @@ var AssignmentUI = Backbone.View.extend({
         var duedate = $("<tr/>");
         body.append(duedate);
         duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate")));
+        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local")));
 
         var timezone = $("<tr/>");
         body.append(timezone);
@@ -537,7 +537,7 @@ var createAssignmentModal = function () {
     var duedate = $("<tr/>");
     table.append(duedate);
     duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local")));
+    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate")));
 
     var timezone = $("<tr/>");
     table.append(timezone);
@@ -587,5 +587,5 @@ $(window).load(function () {
     loadAssignments();
 });
 
-console.log('JS',$('input.duedate[type="datetime-local"]'))
-console.log('JSvalue',$('input.duedate[type="datetime-local"]').val())
+console.log('JS',$('#assignmentDueDate'))
+console.log('JSvalue',$('#assignmentDueDate').val())
