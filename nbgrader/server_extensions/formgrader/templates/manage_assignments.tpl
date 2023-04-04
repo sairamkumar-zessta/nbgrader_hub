@@ -877,7 +877,8 @@ Manage Students</a></li>
 	var minDateTime = minDate + 'T' + minTime;
 	$('#assignmentDueDate').attr('min', minDateTime);
 
-	console.log('HTML',$('#assignmentDueDate'))
+	console.log('html',$('input.duedate[type="datetime-local"]'))
+	console.log('htmlvalue',$('input.duedate[type="datetime-local"]').val())
 	</script>
 	{% endblock %}
 

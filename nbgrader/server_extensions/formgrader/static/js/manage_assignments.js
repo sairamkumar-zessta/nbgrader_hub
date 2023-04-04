@@ -587,4 +587,5 @@ $(window).load(function () {
     loadAssignments();
 });
 
-console.log('JS',$('#assignmentDueDate'))
+console.log('JS',$('input.duedate[type="datetime-local"]'))
+console.log('JSvalue',$('input.duedate[type="datetime-local"]').val())
