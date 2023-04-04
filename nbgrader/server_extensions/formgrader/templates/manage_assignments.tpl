@@ -862,6 +862,22 @@ Manage Students</a></li>
 			}
 		});
 	}
-</script>
-{% endblock %}
+
+	var today = new Date();
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	var hours = today.getHours();
+	var minutes = today.getMinutes();
+	var seconds = today.getSeconds();
+
+	// Set minimum date and time in datetime-local input field
+	var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
+	var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+	var minDateTime = minDate + 'T' + minTime;
+	$('.duedate').attr('min', minDateTime);
+
+	console.log('HTML',$('.duedate'))
+	</script>
+	{% endblock %}
 
