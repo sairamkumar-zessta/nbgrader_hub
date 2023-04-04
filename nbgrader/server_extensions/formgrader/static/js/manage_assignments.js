@@ -46,23 +46,11 @@ var AssignmentUI = Backbone.View.extend({
             .addClass("modal-name")
             .attr("type", "text")
             .attr("disabled", "disabled")));
-        var today = new Date();
-        var year = today.getFullYear();
-        var month = today.getMonth() + 1;
-        var day = today.getDate();
-        var hours = today.getHours();
-        var minutes = today.getMinutes();
-        var seconds = today.getSeconds();
-        // Set minimum date and time in datetime-local input field
-        var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
-        var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
-        var minDateTime = minDate + 'T' + minTime;
-        // $('#assignmentDueDate').attr('min', minDateTime);
 
         var duedate = $("<tr/>");
         body.append(duedate);
         duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local").attr('min', minDateTime)));
+        duedate.append($("<td/>").append($("<input/>").addClass("modal-duedate").attr("type", "datetime-local")));
 
         var timezone = $("<tr/>");
         body.append(timezone);
@@ -546,10 +534,24 @@ var createAssignmentModal = function () {
     name.append($("<td/>").addClass("align-middle").text("Name"));
     name.append($("<td/>").append($("<input/>").addClass("name").attr("type", "text").attr("size", "31")));
 
+
+    var today = new Date();
+    var year = today.getFullYear();
+    var month = today.getMonth() + 1;
+    var day = today.getDate();
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+    // Set minimum date and time in datetime-local input field
+    var minDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
+    var minTime = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+    var minDateTime = minDate + 'T' + minTime;
+    // $('#assignmentDueDate').attr('min', minDateTime);
+
     var duedate = $("<tr/>");
     table.append(duedate);
     duedate.append($("<td/>").addClass("align-middle").text("Due date (optional)"));
-    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate")));
+    duedate.append($("<td/>").append($("<input/>").addClass("duedate").attr("type", "datetime-local").attr("id", "assignmentDueDate").attr('min', minDateTime)));
 
     var timezone = $("<tr/>");
     table.append(timezone);
